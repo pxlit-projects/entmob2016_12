@@ -1,0 +1,2 @@
+C:\Users\Frank\Documents\Visual Studio 2015\Projects\App6\App6\App6.WinPhone\App6.WinPhone.csproj;neutral
+C:\Users\Frank\Documents\Visual Studio 2015\Projects\App6\App6\App6\App6.csproj;neutral
