@@ -7,7 +7,7 @@ Leden entmob2016_12
 --------
 > - Francesco Ventura
 > - Joren Luykx
-> - Kaan Köseoğlu
+> - Kaan Köseoglu
 > - Bunyamin Eren
 
 --------------------
@@ -56,3 +56,7 @@ Werkwijze
 
 > Wat we uiteindelijk van plan zijn is het maken van een applicatie dat deze gegevens verzamelt van onze sensor. Op basis van de luchtdruk en vochtgehalte wordt er gekeken of er kans is op neerslag. In dat geval krijgt de gebruiker een melding. 
 > We kunnen ook bij bepaalde combinaties (vochtig & warm, elk soort regenweer, etc) een extra melding doorsturen.
+
+### Diagram
+> Hier vindt u ons architectuur-tekening
+> ![Architectuur-tekening](https://github.com/pxlit-projects/entmob2016_12/blob/master/Diagram/Diagram.png)
