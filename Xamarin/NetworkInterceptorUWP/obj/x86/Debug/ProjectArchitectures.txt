@@ -1,1 +1,0 @@
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\NetworkInterceptorUWP\NetworkInterceptorUWP.csproj;x86
