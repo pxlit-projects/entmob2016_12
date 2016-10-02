@@ -23,13 +23,13 @@ namespace App6
 
         public void ScanDevices(object senderr, EventArgs es)
         {
-            Debug.WriteLine("Starting to Scan Devices");
+            DisplayAlert("Alert", "Starting to Scan Devices", "OK");
 
             adapter.DeviceDiscovered += (sender, e) =>
             {
                 if (e.Device.Name != null)
                 {
-                    Debug.WriteLine("Device found with name" + e.Device);
+                    DisplayAlert("Alert", "Device found with name" + e.Device, "OK");
                 }
             };
 
@@ -41,7 +41,7 @@ namespace App6
 
             if (adapter.IsScanning) // stop with previous scans
             {
-                Debug.WriteLine("Finishing scanning");
+                DisplayAlert("Alert", "Finishing scanning", "OK");
                 adapter.StopScanningForDevices();
             }
 

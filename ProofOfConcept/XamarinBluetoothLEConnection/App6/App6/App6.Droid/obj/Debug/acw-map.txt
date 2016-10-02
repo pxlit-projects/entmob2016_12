@@ -2,6 +2,14 @@ App6.Droid.MainActivity, App6.Droid;md5713c985bc4b0549da4319e1fdd2fd806.MainActi
 App6.Droid.MainActivity, App6.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5713c985bc4b0549da4319e1fdd2fd806.MainActivity
 App6.Droid.MainActivity;md5713c985bc4b0549da4319e1fdd2fd806.MainActivity
 app6.droid.MainActivity;md5713c985bc4b0549da4319e1fdd2fd806.MainActivity
+Robotics.Mobile.Core.Bluetooth.LE.Adapter, Robotics.Mobile.Core.Droid;md5023215d593d44f50438f36261234faca.Adapter
+Robotics.Mobile.Core.Bluetooth.LE.Adapter, Robotics.Mobile.Core.Droid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;md5023215d593d44f50438f36261234faca.Adapter
+Robotics.Mobile.Core.Bluetooth.LE.Adapter;md5023215d593d44f50438f36261234faca.Adapter
+robotics.mobile.core.bluetooth.le.Adapter;md5023215d593d44f50438f36261234faca.Adapter
+Robotics.Mobile.Core.Bluetooth.LE.GattCallback, Robotics.Mobile.Core.Droid;md5023215d593d44f50438f36261234faca.GattCallback
+Robotics.Mobile.Core.Bluetooth.LE.GattCallback, Robotics.Mobile.Core.Droid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;md5023215d593d44f50438f36261234faca.GattCallback
+Robotics.Mobile.Core.Bluetooth.LE.GattCallback;md5023215d593d44f50438f36261234faca.GattCallback
+robotics.mobile.core.bluetooth.le.GattCallback;md5023215d593d44f50438f36261234faca.GattCallback
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
@@ -566,11 +574,3 @@ Xamarin.Forms.Platform.Android.AppCompat.FormsFragmentPagerAdapter`1, Xamarin.Fo
 Xamarin.Forms.Platform.Android.AppCompat.FormsFragmentPagerAdapter`1, Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null;md5270abb39e60627f0f200893b490a1ade.FormsFragmentPagerAdapter_1
 Xamarin.Forms.Platform.Android.AppCompat.FormsFragmentPagerAdapter`1;md5270abb39e60627f0f200893b490a1ade.FormsFragmentPagerAdapter_1
 xamarin.forms.platform.android.appcompat.FormsFragmentPagerAdapter_1;md5270abb39e60627f0f200893b490a1ade.FormsFragmentPagerAdapter_1
-Robotics.Mobile.Core.Bluetooth.LE.Adapter, Robotics.Mobile.Core.Droid;md5023215d593d44f50438f36261234faca.Adapter
-Robotics.Mobile.Core.Bluetooth.LE.Adapter, Robotics.Mobile.Core.Droid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;md5023215d593d44f50438f36261234faca.Adapter
-Robotics.Mobile.Core.Bluetooth.LE.Adapter;md5023215d593d44f50438f36261234faca.Adapter
-robotics.mobile.core.bluetooth.le.Adapter;md5023215d593d44f50438f36261234faca.Adapter
-Robotics.Mobile.Core.Bluetooth.LE.GattCallback, Robotics.Mobile.Core.Droid;md5023215d593d44f50438f36261234faca.GattCallback
-Robotics.Mobile.Core.Bluetooth.LE.GattCallback, Robotics.Mobile.Core.Droid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null;md5023215d593d44f50438f36261234faca.GattCallback
-Robotics.Mobile.Core.Bluetooth.LE.GattCallback;md5023215d593d44f50438f36261234faca.GattCallback
-robotics.mobile.core.bluetooth.le.GattCallback;md5023215d593d44f50438f36261234faca.GattCallback

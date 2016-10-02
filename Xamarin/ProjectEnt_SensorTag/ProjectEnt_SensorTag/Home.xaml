@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectEnt_SensorTag.Home">
+             
+  <Grid  Margin="0,10,0,0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="0.9*" />
+      <RowDefinition Height="0.1*" />
+    </Grid.RowDefinitions>
+    <StackLayout Grid.Row="0" Orientation="Vertical">
+      <Label Text="De RegenDans" Margin="5" FontSize="16" HorizontalTextAlignment="Center" TextColor="{StaticResource title}"/>
+      <Image Source="rain.jpg" Margin="2" />
+      <Label Text="Dit Applicatie is gemaakt om de regen te voorspellen doormiddel van de SensorTag. Op basis van de luchtdruk en vochtgehalte wordt er gekeken of er kans is op neerslag. " Margin="5" FontSize="13" FontFamily="Arial" HorizontalTextAlignment="Start" TextColor="{StaticResource text}"/>
+      <Button x:name="logInButton" Text="Log In" Clicked="logIn_Click"/>
+      <Button x:name="registerButton" Text="Register" Clicked="register_Click"/>
+    </StackLayout>
+    <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="{StaticResource menu}" Spacing="10" Padding="10">
+      <Button x:name="HomeButton" Text="Home" />
+    <Button x:name="HomeButton" Text="Kans op Regen?" />
+  <Button x:name="HomeButton" Text="SensorTag" />
+    </StackLayout>
+  </Grid>
+</ContentPage>

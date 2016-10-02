@@ -116,11 +116,17 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Robotics.Mobile.Core">
-      <HintPath>..\..\Components\Monkey.Robotics-0.5.2\lib\ios-unified\Robotics.Mobile.Core.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Robotics.Mobile.Core.iOS">
-      <HintPath>..\..\Components\Monkey.Robotics-0.5.2\lib\ios-unified\Robotics.Mobile.Core.iOS.dll</HintPath>
+    <Reference Include="Robotics.Mobile.Core, Version=1.0.5500.30933, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Monkey.Robotics.0.5.2\lib\Xamarin.iOS10\Robotics.Mobile.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Robotics.Mobile.Core.iOS, Version=1.0.5500.30950, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Monkey.Robotics.0.5.2\lib\Xamarin.iOS10\Robotics.Mobile.Core.iOS.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
