@@ -12,11 +12,10 @@
       <Label Text="De RegenDans" Margin="5" FontSize="16" HorizontalTextAlignment="Center" TextColor="{StaticResource title}"/>
       <Image Source="rain.jpg" Margin="2" />
       <Label Text="Dit Applicatie is gemaakt om de regen te voorspellen doormiddel van de SensorTag. Op basis van de luchtdruk en vochtgehalte wordt er gekeken of er kans is op neerslag. " Margin="5" FontSize="13" FontFamily="Arial" HorizontalTextAlignment="Start" TextColor="{StaticResource text}"/>
-      <Button x:name="logInButton" Text="Log In" Clicked="logIn_Click"/>
-      <Button x:name="registerButton" Text="Register" Clicked="register_Click"/>
+      <Button x:name="logInButton" Text="Log In"/>
+      <Button x:name="registerButton" Text="Register" />
     </StackLayout>
     <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="{StaticResource menu}" Spacing="10" Padding="10">
-      <Button x:name="HomeButton" Text="Home" />
     <Button x:name="HomeButton" Text="Kans op Regen?" />
   <Button x:name="HomeButton" Text="SensorTag" />
     </StackLayout>

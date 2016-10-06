@@ -15,9 +15,10 @@ namespace ProjectEnt_SensorTag
             InitializeComponent();
         }
 
-        private void logIn_Click(object sender, EventArgs e)
+        private void Login_Click(object sender, EventArgs e)
         {
-            DisplayAlert("Alert", "alert", "cancel");
+
         }
+
     }
 }

@@ -1,6 +1,7 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <ReferenceAssembly PathName="c:\users\frank\documents\github\entmob2016_12\xamarin\projectent_sensortag\projectent_sensortag\bin\debug\projectent_sensortag.dll" HashGuid="0202058e-714f-3ff7-509b-b20bcd65d886" />
+    <LocalAssembly PathName="c:\users\frank\documents\github\entmob2016_12\xamarin\projectent_sensortag\projectent_sensortag.winphone\obj\debug\intermediatexaml\projectent_sensortag.winphone.exe" HashGuid="14e35434-c0d9-5b9d-4217-89c9e5804222" />
+    <ReferenceAssembly PathName="c:\users\frank\documents\github\entmob2016_12\xamarin\projectent_sensortag\projectent_sensortag\bin\debug\projectent_sensortag.dll" HashGuid="a3f1066f-95f0-da80-eee3-25513ad8faba" />
     <ReferenceAssembly PathName="c:\users\frank\documents\github\entmob2016_12\xamarin\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.core.dll" HashGuid="2a418b72-55c1-19a8-a363-4b8c348fbee0" />
     <ReferenceAssembly PathName="c:\users\frank\documents\github\entmob2016_12\xamarin\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.dll" HashGuid="bb4040f4-26bb-5883-795e-627e39855666" />
     <ReferenceAssembly PathName="c:\users\frank\documents\github\entmob2016_12\xamarin\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="068a3578-03d9-2580-f12e-c531e1d2d71c" />

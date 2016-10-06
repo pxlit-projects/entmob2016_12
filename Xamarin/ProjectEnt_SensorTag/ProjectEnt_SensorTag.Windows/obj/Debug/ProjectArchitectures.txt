@@ -1,0 +1,2 @@
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Windows\ProjectEnt_SensorTag.Windows.csproj;neutral
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\ProjectEnt_SensorTag.csproj;neutral
