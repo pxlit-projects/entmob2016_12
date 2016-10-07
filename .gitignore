@@ -253,6 +253,8 @@ paket-files/
 *.sln.iml
 =======
 *.htm
-Xamarin/ProjectEnt_SensorTag.Model/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.cache
+*.dll
+*.pdb
+*.mdf
 >>>>>>> master
