@@ -138,6 +138,8 @@ class MonoPackageManager_Resources {
 		"System.Collections.Concurrent.dll",
 		"System.Runtime.InteropServices.dll",
 		"System.Resources.ResourceManager.dll",
+		"ProjectEnt_SensorTag.Model.dll",
+		"System.ComponentModel.Annotations.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

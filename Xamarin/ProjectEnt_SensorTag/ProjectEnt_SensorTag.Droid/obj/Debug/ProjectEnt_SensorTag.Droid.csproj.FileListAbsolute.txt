@@ -155,5 +155,13 @@ C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEn
 C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Model.dll
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Model.pdb
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ComponentModel.Annotations.xml
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Model.dll.mdb
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ComponentModel.DataAnnotations.dll.mdb
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\ProjectEnt_SensorTag.Model.dll.mdb
+C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll.mdb
 C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\ProjectEnt_SensorTag.Droid.dll.mdb
 C:\Users\Frank\Source\Repos\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Droid.dll.mdb

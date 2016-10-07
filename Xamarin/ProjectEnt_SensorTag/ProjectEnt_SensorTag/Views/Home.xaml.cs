@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEnt_SensorTag.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,17 @@ namespace ProjectEnt_SensorTag
         {
             InitializeComponent();
         }
-
         private void Login_Click(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new LogIn());
+        }
+        private void Register_Click(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new Register());
+        }
+        private void ConnectSensorTag_Click(object sender, EventArgs e)
         {
 
         }
-
     }
 }
