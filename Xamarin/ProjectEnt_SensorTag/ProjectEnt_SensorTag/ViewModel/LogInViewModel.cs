@@ -14,10 +14,10 @@ namespace ProjectEnt_SensorTag.ViewModel
 
         public User User
         {
-            get { return User; }
+            get { return user; }
             set
             {
-                User = value;
+                user = value;
                 RaisePropertyChanged("User");
             }
         }
