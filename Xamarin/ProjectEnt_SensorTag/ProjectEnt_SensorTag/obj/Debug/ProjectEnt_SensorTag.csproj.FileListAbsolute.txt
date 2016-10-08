@@ -56,7 +56,3 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\bin\Debug\ProjectEnt_SensorTag.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\bin\Debug\ProjectEnt_SensorTag.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\bin\Debug\ProjectEnt_SensorTag.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\bin\Debug\ProjectEnt_SensorTag.dll.mdb
