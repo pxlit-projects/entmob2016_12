@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectEnt_SensorTag.Views.SensorTagDetail">
+    <ContentPage.Content>
+        <ScrollView>
+            <Image Source="sensortag-img-bluetooth.png" />
+            <TextBlock>
+                         <Run Text="SensorTag" />
+                         <Run Text="{Binding ID}" />
+            </TextBlock>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

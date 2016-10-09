@@ -1,4 +1,5 @@
-﻿using Robotics.Mobile.Core.Bluetooth.LE;
+﻿using ProjectEnt_SensorTag.ViewModel;
+using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,19 @@ namespace ProjectEnt_SensorTag
 {
     public partial class App : Application
     {
-        public static IAdapter adapter { get; private set; }
+        private static ViewModelLocator locator = new ViewModelLocator();
+
+        public static ViewModelLocator Locator
+        {
+            get { return locator; }
+            set { locator = value; }
+        }
 
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Home();
+            MainPage = new NavigationPage(new Home());
         }
 
         protected override void OnStart()
@@ -36,7 +43,7 @@ namespace ProjectEnt_SensorTag
 
         public static void SetAdapter(IAdapter phoneadapter)
         {
-            adapter = phoneadapter;
+            SensorTagViewModel.adapter = phoneadapter;
         }
     }
 }

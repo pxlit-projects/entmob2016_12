@@ -102,11 +102,14 @@ class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Robotics.Mobile.Core.dll",
 		"Robotics.Mobile.Core.Droid.dll",
+		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Android.Support.v7.CardView.dll",
 		"Xamarin.Android.Support.v7.MediaRouter.dll",
+		"Xamarin.Android.Support.v7.RecyclerView.dll",
+		"Xamarin.Android.Support.Vector.Drawable.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
@@ -140,6 +143,10 @@ class MonoPackageManager_Resources {
 		"System.Resources.ResourceManager.dll",
 		"ProjectEnt_SensorTag.Model.dll",
 		"System.ComponentModel.Annotations.dll",
+		"GalaSoft.MvvmLight.dll",
+		"Microsoft.Practices.ServiceLocation.dll",
+		"GalaSoft.MvvmLight.Extras.dll",
+		"ProjectEnt_SensorTag.SensorTagLib.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
