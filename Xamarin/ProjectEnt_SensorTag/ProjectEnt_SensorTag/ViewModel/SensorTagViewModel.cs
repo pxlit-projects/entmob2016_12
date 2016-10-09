@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace ProjectEnt_SensorTag.ViewModel
 {
@@ -18,22 +19,26 @@ namespace ProjectEnt_SensorTag.ViewModel
         public ObservableCollection<IDevice> DeviceList
         {
             get { return deviceList; }
-            set
-            {
-                deviceList = value;
-            }
+            set { deviceList = value; }
         }
         public SensorTagViewModel()
         {
             deviceList = new ObservableCollection<IDevice>();
-            GetDeviceList();
+            refreshList = new RelayCommand(() => GetDeviceList());
         }
         public async void GetDeviceList()
         {
-            var device = await DeviceFactory.FindDevice(adapter);
-            Debug.WriteLine("Device found! " + device.Name);
+            if(deviceList.Count > 0 ) DeviceList = new ObservableCollection<IDevice>();
+            var device = await DeviceFactory.FindDevice();
             deviceList.Add(device);
         }
-        public static IAdapter adapter { get; set; }
+
+        private ICommand refreshList;
+
+        public ICommand RefreshList
+        {
+            get { return refreshList; }
+            set { refreshList = value; }
+        }
     }
 }

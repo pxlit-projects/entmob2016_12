@@ -5,7 +5,7 @@
              Title="Sensor Tag List">
   <ContentPage.Content>
         <StackLayout>
-            <ListView x:name="sensorTagList" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" ItemsSource="{Binding DeviceList}">
+            <ListView x:Name="sensorTagList" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" ItemsSource="{Binding DeviceList}" ItemSelected="ListView_OnItemSelected" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Name}" />

@@ -1,4 +1,5 @@
-﻿using ProjectEnt_SensorTag.ViewModel;
+﻿using ProjectEnt_SensorTag.SensorTagLib;
+using ProjectEnt_SensorTag.ViewModel;
 using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,7 @@ namespace ProjectEnt_SensorTag
 
         public static void SetAdapter(IAdapter phoneadapter)
         {
-            SensorTagViewModel.adapter = phoneadapter;
+            DeviceSetup.localAdapter = phoneadapter;
         }
     }
 }

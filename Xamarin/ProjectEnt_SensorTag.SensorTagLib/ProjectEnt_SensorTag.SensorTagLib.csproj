@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DeviceFactory.cs" />
+    <Compile Include="DeviceSetup.cs" />
     <Compile Include="Exceptions\NoDeviceFoundException.cs" />
     <Compile Include="Exceptions\UnknownDeviceException.cs" />
     <Compile Include="SensorTag.cs" />

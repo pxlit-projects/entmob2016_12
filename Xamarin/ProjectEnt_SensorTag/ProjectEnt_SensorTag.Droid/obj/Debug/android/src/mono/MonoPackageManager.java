@@ -145,8 +145,8 @@ class MonoPackageManager_Resources {
 		"System.ComponentModel.Annotations.dll",
 		"GalaSoft.MvvmLight.dll",
 		"Microsoft.Practices.ServiceLocation.dll",
-		"GalaSoft.MvvmLight.Extras.dll",
 		"ProjectEnt_SensorTag.SensorTagLib.dll",
+		"GalaSoft.MvvmLight.Extras.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

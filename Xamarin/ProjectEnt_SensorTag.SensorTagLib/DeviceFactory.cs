@@ -10,25 +10,24 @@ using System.Threading.Tasks;
 
 namespace ProjectEnt_SensorTag.SensorTagLib
 {
-    public static class DeviceFactory
+    public class DeviceFactory : DeviceSetup
     {
         static TaskCompletionSource<IDevice> tcs = new TaskCompletionSource<IDevice>();
-        static ObservableCollection<IDevice> device = new ObservableCollection<IDevice>();
-        static IAdapter localadapter;
-        public static Task<IDevice> FindDevice(IAdapter adapter)
+        static ObservableCollection<IDevice> deviceList = new ObservableCollection<IDevice>();
+       
+        public static Task<IDevice> FindDevice()
         {
-            localadapter = adapter;
-            adapter.DeviceDiscovered += DeviceDiscovered;
-            adapter.ScanTimeoutElapsed += ScanTimeoutElapsed;
 
-            if (adapter.IsScanning)
+            localAdapter.DeviceDiscovered += DeviceDiscovered;
+            localAdapter.ScanTimeoutElapsed += ScanTimeoutElapsed;
+
+            if (localAdapter.IsScanning)
             {
-                adapter.StopScanningForDevices();
-                device = new ObservableCollection<IDevice>();
-                localadapter = null;
+                localAdapter.StopScanningForDevices();
+                deviceList = new ObservableCollection<IDevice>();
             }
 
-            adapter.StartScanningForDevices(Guid.Empty);
+            localAdapter.StartScanningForDevices(Guid.Empty);
 
             return tcs.Task;
         }
@@ -38,7 +37,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib
             if (e.Device?.Name.Contains("SensorTag") == true)
             {
                 Debug.WriteLine("Device Found With Name " + e.Device.Name);
-                device.Add(e.Device);
+                deviceList.Add(e.Device);
                 tcs.TrySetResult(e.Device);
             }
             else
@@ -49,9 +48,9 @@ namespace ProjectEnt_SensorTag.SensorTagLib
 
         public static void ScanTimeoutElapsed(object sender, EventArgs e)
         {
-            localadapter.StopScanningForDevices();
-            localadapter = null;
-            if (device.Count == 0)
+            localAdapter.StopScanningForDevices();
+
+            if (deviceList.Count == 0)
             {
                 tcs.SetException(new NoDeviceFoundException("No Device was found"));
             }
