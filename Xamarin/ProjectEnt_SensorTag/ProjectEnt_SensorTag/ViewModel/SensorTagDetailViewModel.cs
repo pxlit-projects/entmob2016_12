@@ -13,7 +13,7 @@ namespace ProjectEnt_SensorTag.ViewModel
 {
     public class SensorTagDetailViewModel : ViewModelBase
     {
-        public static IDevice Device { get; set; }
+        public  IDevice Device { get; set; }
         private RelayCommand conntectToService;
         private bool isConnected = false;
         public SensorTagDetailViewModel()

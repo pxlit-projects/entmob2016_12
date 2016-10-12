@@ -1,11 +1,8 @@
 ﻿using ProjectEnt_SensorTag.SensorTagLib;
+using ProjectEnt_SensorTag.View;
 using ProjectEnt_SensorTag.ViewModel;
+using ProjectEnt_SensorTag.Views;
 using Robotics.Mobile.Core.Bluetooth.LE;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Xamarin.Forms;
 
 namespace ProjectEnt_SensorTag
@@ -23,8 +20,10 @@ namespace ProjectEnt_SensorTag
         public App()
         {
             InitializeComponent();
+            var firstPage = new NavigationPage(new Home());
 
-            MainPage = new NavigationPage(new Home());
+            Locator.nav.Initialize(firstPage);
+            MainPage = firstPage;
         }
 
         protected override void OnStart()

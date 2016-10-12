@@ -12,20 +12,21 @@ namespace ProjectEnt_SensorTag.SensorTagLib
 {
     public class DeviceFactory : DeviceSetup
     {
-        static TaskCompletionSource<IDevice> tcs = new TaskCompletionSource<IDevice>();
+        static TaskCompletionSource<ObservableCollection<IDevice>> tcs = new TaskCompletionSource<ObservableCollection<IDevice>>();
         static ObservableCollection<IDevice> deviceList = new ObservableCollection<IDevice>();
-       
-        public static Task<IDevice> FindDevice()
+
+       public static Task<ObservableCollection<IDevice>> FindDevice()
         {
-
-            localAdapter.DeviceDiscovered += DeviceDiscovered;
-            localAdapter.ScanTimeoutElapsed += ScanTimeoutElapsed;
-
             if (localAdapter.IsScanning)
             {
                 localAdapter.StopScanningForDevices();
-                deviceList = new ObservableCollection<IDevice>();
+
+                localAdapter.DeviceDiscovered -= DeviceDiscovered;
+                localAdapter.ScanTimeoutElapsed -= ScanTimeoutElapsed;
             }
+
+            localAdapter.DeviceDiscovered += DeviceDiscovered;
+            localAdapter.ScanTimeoutElapsed += ScanTimeoutElapsed;
 
             localAdapter.StartScanningForDevices(Guid.Empty);
 
@@ -38,7 +39,8 @@ namespace ProjectEnt_SensorTag.SensorTagLib
             {
                 Debug.WriteLine("Device Found With Name " + e.Device.Name);
                 deviceList.Add(e.Device);
-                tcs.TrySetResult(e.Device);
+                tcs.TrySetResult(deviceList);
+                localAdapter.DeviceDiscovered -= DeviceDiscovered;
             }
             else
             {
@@ -49,11 +51,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib
         public static void ScanTimeoutElapsed(object sender, EventArgs e)
         {
             localAdapter.StopScanningForDevices();
-
-            if (deviceList.Count == 0)
-            {
-                tcs.SetException(new NoDeviceFoundException("No Device was found"));
-            }
+            tcs.TrySetResult(null);
         }
     }
 }

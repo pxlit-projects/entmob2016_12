@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Views;
 using ProjectEnt_SensorTag.SensorTagLib;
 using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
@@ -21,24 +22,47 @@ namespace ProjectEnt_SensorTag.ViewModel
             get { return deviceList; }
             set { deviceList = value; }
         }
-        public SensorTagViewModel()
+
+        private INavigationService nav;
+        public INavigationService Nav
         {
+            get { return nav; }
+            set { nav = value; }
+        }
+
+        private ICommand selectSensorTag;
+        public ICommand SelectSensorTag
+        {
+            get { return selectSensorTag; }
+            set { selectSensorTag = value; }
+        }
+
+        public SensorTagViewModel(INavigationService nav)
+        {
+            this.nav = nav;
             deviceList = new ObservableCollection<IDevice>();
+            selectSensorTag = new RelayCommand(() => nav.NavigateTo("SensorTagDetail"));
             refreshList = new RelayCommand(() => GetDeviceList());
         }
         public async void GetDeviceList()
         {
-            if(deviceList.Count > 0 ) DeviceList = new ObservableCollection<IDevice>();
-            var device = await DeviceFactory.FindDevice();
-            deviceList.Add(device);
-        }
+            if (deviceList.Count > 0) DeviceList = new ObservableCollection<IDevice>();
 
+            try
+            {
+                deviceList = await DeviceFactory.FindDevice();
+            }
+            catch
+            {
+
+            }
+        }    
         private ICommand refreshList;
-
         public ICommand RefreshList
         {
             get { return refreshList; }
             set { refreshList = value; }
         }
+
     }
 }

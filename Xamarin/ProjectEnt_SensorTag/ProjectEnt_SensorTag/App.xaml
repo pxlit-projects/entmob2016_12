@@ -4,8 +4,7 @@
     <ResourceDictionary>
       <Color x:Key="menu">#191919</Color>
       <Color x:Key="title">#191919</Color>
-      <Color x:Key="text">#0c0c0c</Color>
-            <vm:ViewModelLocator x:Key="ViewModelLocator" d:IsDataSource="True" xmlns:d4p1="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:ProjectEnt_SensorTag.ViewModel" />
-    </ResourceDictionary>
+            <Color x:Key="text">#0c0c0c</Color>
+        </ResourceDictionary>
   </Application.Resources>
 </Application>

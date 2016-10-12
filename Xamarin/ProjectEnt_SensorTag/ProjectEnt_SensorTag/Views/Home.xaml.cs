@@ -9,26 +9,14 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace ProjectEnt_SensorTag
+namespace ProjectEnt_SensorTag.View
 {
     public partial class Home : ContentPage
     {
         public Home()
         {
-            InitializeComponent();      
-        }
-
-        private void Login_Click(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new LogIn());
-        }
-        private void Register_Click(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new Register());
-        }
-        private void ConnectSensorTag_Click(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new SensorTagOverview());
+            InitializeComponent();
+            BindingContext = App.Locator.Main;
         }
     }
 }

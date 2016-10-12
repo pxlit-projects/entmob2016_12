@@ -1,4 +1,7 @@
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Views;
+using System.Windows.Input;
 
 namespace ProjectEnt_SensorTag.ViewModel
 {
@@ -19,16 +22,50 @@ namespace ProjectEnt_SensorTag.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel()
+        private ICommand logIn;
+        public ICommand LogIn
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            get { return logIn; }
+            set { logIn = value; }
+        }
+
+        private ICommand register;
+        public ICommand Register
+        {
+            get { return register; }
+            set { register = value; }
+        }
+
+        private ICommand sensorTag;
+        public ICommand SensorTag
+        {
+            get { return sensorTag; }
+            set { sensorTag = value; }
+        }
+
+        private INavigationService nav;
+        public INavigationService Nav
+        {
+            get { return nav; }
+            set { nav = value; }
+        }
+
+        public MainViewModel(INavigationService nav)
+        {
+            this.nav = nav;
+            // configure Navigation
+            logIn = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("LogIn");
+            });
+            register = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("Register");
+            });
+            SensorTag = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("SensorTagOverview");
+            });
         }
     }
 }

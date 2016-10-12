@@ -1,0 +1,9 @@
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\bin\Debug\ProjectEnt_SensorTag.SensorTagLib.dll
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\bin\Debug\ProjectEnt_SensorTag.SensorTagLib.pdb
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\bin\Debug\Robotics.Mobile.Core.dll
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\obj\Debug\ProjectEnt_SensorTag.SensorTagLib.csprojResolveAssemblyReference.cache
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\obj\Debug\ProjectEnt_SensorTag.SensorTagLib.dll
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\obj\Debug\ProjectEnt_SensorTag.SensorTagLib.pdb
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\obj\Debug\ProjectEnt_SensorTag.SensorTagLib.dll.mdb
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.SensorTagLib\bin\Debug\ProjectEnt_SensorTag.SensorTagLib.dll.mdb

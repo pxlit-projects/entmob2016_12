@@ -4,7 +4,7 @@
              x:Class="ProjectEnt_SensorTag.Views.SensorTagDetail">
     <ContentPage.Content>
         <ScrollView>
-            <Image Source="sensortag.png" />
+            <Image Source="sensortag.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
             <Label Text="{Binding Device.Name}" />
             <Button Command="{Binding conntectToService}" Text="Verbinding Maken" />
         </ScrollView>
