@@ -12,10 +12,8 @@ namespace ProjectEnt_SensorTag.SensorTagLib
 {
     public class DeviceFactory : DeviceSetup
     {
-        static TaskCompletionSource<ObservableCollection<IDevice>> tcs = new TaskCompletionSource<ObservableCollection<IDevice>>();
-        static ObservableCollection<IDevice> deviceList = new ObservableCollection<IDevice>();
-
-       public static Task<ObservableCollection<IDevice>> FindDevice()
+       static TaskCompletionSource<IDevice> tcs = new TaskCompletionSource<IDevice>();
+       public static Task<IDevice> FindDevice()
         {
             if (localAdapter.IsScanning)
             {
@@ -38,8 +36,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib
             if (e.Device?.Name.Contains("SensorTag") == true)
             {
                 Debug.WriteLine("Device Found With Name " + e.Device.Name);
-                deviceList.Add(e.Device);
-                tcs.TrySetResult(deviceList);
+                tcs.TrySetResult(e.Device);
                 localAdapter.DeviceDiscovered -= DeviceDiscovered;
             }
             else
@@ -51,7 +48,6 @@ namespace ProjectEnt_SensorTag.SensorTagLib
         public static void ScanTimeoutElapsed(object sender, EventArgs e)
         {
             localAdapter.StopScanningForDevices();
-            tcs.TrySetResult(null);
         }
     }
 }

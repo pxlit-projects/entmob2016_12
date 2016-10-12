@@ -30,18 +30,36 @@ namespace ProjectEnt_SensorTag.ViewModel
             set { nav = value; }
         }
 
-        private ICommand selectSensorTag;
-        public ICommand SelectSensorTag
+        private IDevice device;
+        public IDevice Device
         {
-            get { return selectSensorTag; }
-            set { selectSensorTag = value; }
+            get
+            {
+                return device;
+            }
+            set
+            {
+                if (device != value)
+                {
+                    device = value;
+                    Set(() => Device, ref device, value);
+                    nav.NavigateTo("SensorTagDetail");
+                }
+            }
+        }
+
+        private ICommand selectedDevice;
+
+        public ICommand SelectedDevice
+        {
+            get { return selectedDevice; }
+            set { selectedDevice = value; }
         }
 
         public SensorTagViewModel(INavigationService nav)
         {
             this.nav = nav;
             deviceList = new ObservableCollection<IDevice>();
-            selectSensorTag = new RelayCommand(() => nav.NavigateTo("SensorTagDetail"));
             refreshList = new RelayCommand(() => GetDeviceList());
         }
         public async void GetDeviceList()
@@ -50,7 +68,8 @@ namespace ProjectEnt_SensorTag.ViewModel
 
             try
             {
-                deviceList = await DeviceFactory.FindDevice();
+                var device = await DeviceFactory.FindDevice();
+                deviceList.Add(device);
             }
             catch
             {
@@ -63,6 +82,5 @@ namespace ProjectEnt_SensorTag.ViewModel
             get { return refreshList; }
             set { refreshList = value; }
         }
-
     }
 }
