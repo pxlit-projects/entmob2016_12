@@ -1,6 +1,9 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
+using GalaSoft.MvvmLight.Views;
+using ProjectEnt_SensorTag.SensorTagLib;
+using ProjectEnt_SensorTag.SensorTagLib.Services;
 using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
 using System.Collections.Generic;
@@ -8,22 +11,48 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ProjectEnt_SensorTag.ViewModel
 {
     public class SensorTagDetailViewModel : ViewModelBase
     {
-        public  IDevice Device { get; set; }
-        private RelayCommand conntectToService;
-        private bool isConnected = false;
-        public SensorTagDetailViewModel()
+        private IDevice device;
+        public IDevice Device
         {
-            conntectToService = new RelayCommand(ConntectToService, () => !isConnected);
+            get { return device; }
+            set {
+                device = value;
+                RaisePropertyChanged(() => Device);
+            }
+        }
+        private ICommand connectToService;
+        public ICommand ConnectToService
+        {
+            get { return connectToService; }
+            set { connectToService = value; }
+        }
+        private INavigationService nav;
+        public SensorTagDetailViewModel(INavigationService nav)
+        {
+            this.nav = nav;
+            Messenger.Default.Register<IDevice>(this,GetDevice);
+            connectToService = new RelayCommand(ConntectToService);
+        }
+
+        private void GetDevice(IDevice device)
+        {
+            Device = device;
         }
 
         private void ConntectToService()
         {
-            throw new NotImplementedException();
+            DeviceEssentials.device = device;
+            TemperatureService.ConnectToDevice();
+
+            nav.GoBack();
+            nav.GoBack();
         }
     }
 }

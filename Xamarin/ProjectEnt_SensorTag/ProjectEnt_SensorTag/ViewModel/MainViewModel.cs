@@ -22,6 +22,14 @@ namespace ProjectEnt_SensorTag.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
+        private static bool connected = false;
+
+        public static bool Connected
+        {
+            get { return connected; }
+            set { connected = value; }
+        }
+
         private ICommand logIn;
         public ICommand LogIn
         {
@@ -50,6 +58,14 @@ namespace ProjectEnt_SensorTag.ViewModel
             set { nav = value; }
         }
 
+        private ICommand regen;
+
+        public ICommand Regen
+        {
+            get { return regen; }
+            set { regen = value; }
+        }
+
         public MainViewModel(INavigationService nav)
         {
             this.nav = nav;
@@ -65,6 +81,10 @@ namespace ProjectEnt_SensorTag.ViewModel
             SensorTag = new RelayCommand(() =>
             {
                 this.nav.NavigateTo("SensorTagOverview");
+            });
+            Regen = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("Regen");
             });
         }
     }

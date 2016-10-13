@@ -39,6 +39,7 @@ namespace ProjectEnt_SensorTag.ViewModel
         private const string register = "Register";
         private const string sensorTagDetail = "SensorTagDetail";
         private const string sensorTagOverview = "SensorTagOverview";
+        private const string regen = "Regen";
 
         public ViewModelLocator()
         {
@@ -50,14 +51,16 @@ namespace ProjectEnt_SensorTag.ViewModel
             nav.Configure(register, typeof(Register));
             nav.Configure(sensorTagDetail, typeof(SensorTagDetail));
             nav.Configure(sensorTagOverview, typeof(SensorTagOverview));
+            nav.Configure(regen, typeof(Regen));
 
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             SimpleIoc.Default.Register<SensorTagDetailViewModel>();
             SimpleIoc.Default.Register<SensorTagViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<RegenViewModel>();
         }
 
-        public NavigationService nav { get; set; }
+        public NavigationService nav;
 
         public MainViewModel Main
         {
@@ -67,7 +70,13 @@ namespace ProjectEnt_SensorTag.ViewModel
             }
         }
 
-        public SensorTagDetailViewModel SensorTagDetailViewModel { get; set; }
+        public SensorTagDetailViewModel SensorTagDetailViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<SensorTagDetailViewModel>();
+            }
+        }
 
         public SensorTagViewModel SensorTagViewModel
         {
@@ -76,6 +85,15 @@ namespace ProjectEnt_SensorTag.ViewModel
                 return ServiceLocator.Current.GetInstance<SensorTagViewModel>();
             }
         }
+
+        public RegenViewModel RegenViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<RegenViewModel>();
+            }
+        }
+
 
         public static void Cleanup()
         {

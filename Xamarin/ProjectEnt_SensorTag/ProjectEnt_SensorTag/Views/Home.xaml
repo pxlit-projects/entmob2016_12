@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectEnt_SensorTag.View.Home"
-             Title="RegenDans">
+             Title="RegenDans"
+             >
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
@@ -19,8 +20,8 @@
             <Button x:name="registerButton" Command="{Binding Register}" Text="Register" />
         </StackLayout>
         <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="{StaticResource menu}" Spacing="10" Padding="10">
-            <Button x:name="HomeButton" Text="Kans op Regen?" />
-            <Button x:name="HomeButton" Text="SensorTag" Command="{Binding SensorTag}" />
+            <Button x:name="RegenButton" Text="Kans op Regen?" Command="{Binding Regen}" />
+            <Button x:name="SensorButton" Text="SensorTag" Command="{Binding SensorTag}" />
         </StackLayout>
     </Grid>
 </ContentPage>

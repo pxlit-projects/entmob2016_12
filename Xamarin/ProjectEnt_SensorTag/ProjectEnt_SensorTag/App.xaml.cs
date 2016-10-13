@@ -43,7 +43,7 @@ namespace ProjectEnt_SensorTag
 
         public static void SetAdapter(IAdapter phoneadapter)
         {
-            DeviceSetup.localAdapter = phoneadapter;
+            DeviceEssentials.localAdapter = phoneadapter;
         }
     }
 }

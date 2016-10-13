@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
 using ProjectEnt_SensorTag.SensorTagLib;
 using Robotics.Mobile.Core.Bluetooth.LE;
@@ -43,17 +44,11 @@ namespace ProjectEnt_SensorTag.ViewModel
                 {
                     device = value;
                     Set(() => Device, ref device, value);
+                  
                     nav.NavigateTo("SensorTagDetail");
+                    Messenger.Default.Send<IDevice>(device);
                 }
             }
-        }
-
-        private ICommand selectedDevice;
-
-        public ICommand SelectedDevice
-        {
-            get { return selectedDevice; }
-            set { selectedDevice = value; }
         }
 
         public SensorTagViewModel(INavigationService nav)
@@ -68,7 +63,7 @@ namespace ProjectEnt_SensorTag.ViewModel
 
             try
             {
-                var device = await DeviceFactory.FindDevice();
+                var device = await DeviceSetup.FindDevice();
                 deviceList.Add(device);
             }
             catch

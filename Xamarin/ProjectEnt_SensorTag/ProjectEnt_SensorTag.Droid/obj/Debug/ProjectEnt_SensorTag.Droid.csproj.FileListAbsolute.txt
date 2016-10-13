@@ -90,6 +90,7 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Droid.pdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Droid.apk
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Droid-Signed.apk
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Behaviors.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\FormsViewGroup.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Robotics.Mobile.Core.dll
@@ -114,6 +115,7 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.pdb
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Behaviors.pdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\FormsViewGroup.pdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\FormsViewGroup.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Xamarin.Forms.Core.pdb
@@ -145,10 +147,11 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\res\layout\toolbar.xml
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\res\values\styles.xml
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\res\drawable\rain.jpg
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\res\drawable\sensortag.png
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\R.cs.flag
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\uploadflags.txt
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Behaviors.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Droid.dll.mdb
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\GalaSoft.MvvmLight.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\GalaSoft.MvvmLight.Extras.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Java.Interop.dll.mdb
@@ -157,7 +160,6 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Mono.Android.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Mono.CSharp.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\mscorlib.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Model.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.SensorTagLib.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
@@ -169,6 +171,7 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.Xml.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\Behaviors.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\FormsViewGroup.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\GalaSoft.MvvmLight.dll.mdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\GalaSoft.MvvmLight.Extras.dll.mdb
