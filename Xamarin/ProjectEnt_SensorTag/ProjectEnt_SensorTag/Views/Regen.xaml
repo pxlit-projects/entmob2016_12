@@ -4,7 +4,11 @@
              x:Class="ProjectEnt_SensorTag.Views.Regen">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="getInfoButton" Command="{Binding GetInfo}" Text="Get Info" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="The temperature is: " />
+                <Label Text="{Binding SensorTag.Temperature.Degree}" />
+            </StackLayout>
+            <Button x:Name="getInfoButton" Command="{Binding GetInfo,Mode=TwoWay}" Text="Activate Sensor" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

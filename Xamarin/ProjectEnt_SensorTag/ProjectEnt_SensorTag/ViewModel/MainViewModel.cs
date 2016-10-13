@@ -70,14 +70,6 @@ namespace ProjectEnt_SensorTag.ViewModel
         {
             this.nav = nav;
             // configure Navigation
-            logIn = new RelayCommand(() =>
-            {
-                this.nav.NavigateTo("LogIn");
-            });
-            register = new RelayCommand(() =>
-            {
-                this.nav.NavigateTo("Register");
-            });
             SensorTag = new RelayCommand(() =>
             {
                 this.nav.NavigateTo("SensorTagOverview");

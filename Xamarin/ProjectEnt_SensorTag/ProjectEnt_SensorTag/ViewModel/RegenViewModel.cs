@@ -36,7 +36,7 @@ namespace ProjectEnt_SensorTag.ViewModel
             this.nav = nav;
             
             sensorTag = new SensorTag();
-            getInfo = new RelayCommand(() => sensorTag.Temperature.StartSensing());
+            getInfo = new RelayCommand(() => sensorTag.Temperature.Info());
         }
     }
 }

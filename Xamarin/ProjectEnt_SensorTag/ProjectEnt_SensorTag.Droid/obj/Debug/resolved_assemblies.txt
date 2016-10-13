@@ -55,9 +55,6 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\System.Resources.ResourceManager.dll
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\ProjectEnt_SensorTag.Model.dll
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\System.ComponentModel.Annotations.dll
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\GalaSoft.MvvmLight.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\ProjectEnt_SensorTag.SensorTagLib.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\android\assets\Microsoft.Practices.ServiceLocation.dll

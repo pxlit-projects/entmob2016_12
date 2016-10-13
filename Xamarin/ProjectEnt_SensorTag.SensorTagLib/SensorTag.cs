@@ -14,7 +14,11 @@ namespace ProjectEnt_SensorTag.SensorTagLib
         public Temperature Temperature
         {
             get { return temperature; }
-            set { temperature = value; }
+            set
+            {
+                temperature = value;
+                Set(() => Temperature, ref temperature, value);
+            }
         }
     }
 }

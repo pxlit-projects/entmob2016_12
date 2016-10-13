@@ -4,7 +4,7 @@
     <ResourceDictionary>
       <Color x:Key="menu">#191919</Color>
       <Color x:Key="title">#191919</Color>
-            <Color x:Key="text">#0c0c0c</Color>
-        </ResourceDictionary>
+      <Color x:Key="text">#0c0c0c</Color>
+    </ResourceDictionary>
   </Application.Resources>
 </Application>

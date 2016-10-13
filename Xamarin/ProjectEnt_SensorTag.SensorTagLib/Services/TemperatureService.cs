@@ -47,7 +47,6 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
 
             temperatureCharConfig.Write(new byte[] { 0x01 }); // Turn ON
             temperatureChar.StartUpdates();
-
         }
         public static void ConnectToDevice()
         {
@@ -70,37 +69,6 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
             };
 
             localAdapter.ConnectToDevice(device);
-        }
-
-        public void StartSensing()
-        {
-
-            if (temperatureChar != null)
-            {
-                //if (temperatureCharConfig.CanUpdate)
-                //{
-                double ambient, infrared;
-                CalculateTemperature(out ambient, out infrared);
-                //}
-            }
-        }
-        private static void CalculateTemperature(out double ambient, out double ir)
-        {
-            var data = temperatureChar.Value;
-
-            short objTemp = (short)((short)data[0] + (short)(data[1] << 8));
-            short dieTemp = (short)((short)data[2] + (short)(data[3] << 8));
-
-            const double SCALE_LSB = 0.03125;
-            int it;
-
-            it = (int)((objTemp) >> 2);
-            ir = (double)it * SCALE_LSB;
-
-            it = (int)((dieTemp) >> 2);
-            ambient = (double)it * SCALE_LSB;
-
-            Debug.WriteLine("ambient: " + ambient + "\nIR: " + ir + " C");
         }
     }
 }

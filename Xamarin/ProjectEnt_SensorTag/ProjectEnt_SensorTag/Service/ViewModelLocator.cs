@@ -35,8 +35,6 @@ namespace ProjectEnt_SensorTag.ViewModel
         /// Singleton?????
         /// </summary>
         private const string home = "Home";
-        private const string logIn = "LogIn";
-        private const string register = "Register";
         private const string sensorTagDetail = "SensorTagDetail";
         private const string sensorTagOverview = "SensorTagOverview";
         private const string regen = "Regen";
@@ -47,13 +45,12 @@ namespace ProjectEnt_SensorTag.ViewModel
 
             nav = new NavigationService();
             nav.Configure(home, typeof(Home));
-            nav.Configure(logIn, typeof(LogIn));
-            nav.Configure(register, typeof(Register));
             nav.Configure(sensorTagDetail, typeof(SensorTagDetail));
             nav.Configure(sensorTagOverview, typeof(SensorTagOverview));
             nav.Configure(regen, typeof(Regen));
 
             SimpleIoc.Default.Register<INavigationService>(() => nav);
+
             SimpleIoc.Default.Register<SensorTagDetailViewModel>();
             SimpleIoc.Default.Register<SensorTagViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
@@ -61,7 +58,6 @@ namespace ProjectEnt_SensorTag.ViewModel
         }
 
         public NavigationService nav;
-
         public MainViewModel Main
         {
             get
@@ -69,7 +65,6 @@ namespace ProjectEnt_SensorTag.ViewModel
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
         }
-
         public SensorTagDetailViewModel SensorTagDetailViewModel
         {
             get
@@ -77,7 +72,6 @@ namespace ProjectEnt_SensorTag.ViewModel
                 return ServiceLocator.Current.GetInstance<SensorTagDetailViewModel>();
             }
         }
-
         public SensorTagViewModel SensorTagViewModel
         {
             get
@@ -85,7 +79,6 @@ namespace ProjectEnt_SensorTag.ViewModel
                 return ServiceLocator.Current.GetInstance<SensorTagViewModel>();
             }
         }
-
         public RegenViewModel RegenViewModel
         {
             get
@@ -93,8 +86,6 @@ namespace ProjectEnt_SensorTag.ViewModel
                 return ServiceLocator.Current.GetInstance<RegenViewModel>();
             }
         }
-
-
         public static void Cleanup()
         {
             // TODO Clear the ViewModels

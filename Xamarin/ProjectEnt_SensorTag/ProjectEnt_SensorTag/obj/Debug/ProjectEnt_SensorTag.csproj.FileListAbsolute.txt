@@ -55,8 +55,6 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.csprojResolveAssemblyReference.cache
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.App.xaml.g.cs
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.Views.Home.xaml.g.cs
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.Views.LogIn.xaml.g.cs
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.Views.Register.xaml.g.cs
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.Views.SensorTagOverview.xaml.g.cs
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.Views.SensorTagDetail.xaml.g.cs
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.dll

@@ -14,14 +14,14 @@ namespace ProjectEnt_SensorTag.SensorTagLib
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private double degree = 0;
+        private double degree = 2;
         public double Degree
         {
             get { return degree; }
             set
             {
                 degree = value;
-                RaisePropertyChanged("Degrees");
+                RaisePropertyChanged("Degree");
             }
         }
 
@@ -30,21 +30,33 @@ namespace ProjectEnt_SensorTag.SensorTagLib
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        // Copy pasta ftw!
         public Temperature()
         {
             DiscoverServicesTemperature();
         }
-        
-
         public Temperature Info()
         {
-
-            temperatureCharConfig.Write(new byte[] { 0x01 }); // Turn ON
-            temperatureChar.StartUpdates();
-
-
+            CalculateTemperature();
             return this;
+        }
+        private void CalculateTemperature()
+        {
+            var data = temperatureChar.Value;
+
+            short objTemp = (short)((short)data[0] + (short)(data[1] << 8));
+            short dieTemp = (short)((short)data[2] + (short)(data[3] << 8));
+
+            const double SCALE_LSB = 0.03125;
+            int it;
+
+            it = (int)((objTemp) >> 2);
+            double ir = (double)it * SCALE_LSB;
+
+            it = (int)((dieTemp) >> 2);
+            double ambient = (double)it * SCALE_LSB;
+
+            Debug.WriteLine("ambient: " + ambient + "\nIR: " + ir + " C");
+            Degree = ir;
         }
     }
 }
