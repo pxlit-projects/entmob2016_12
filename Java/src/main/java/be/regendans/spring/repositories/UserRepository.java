@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Bunyamin on 14/10/2016.
+ * @author Bunyamin
  */
 
 @Repository("UserRepository")
