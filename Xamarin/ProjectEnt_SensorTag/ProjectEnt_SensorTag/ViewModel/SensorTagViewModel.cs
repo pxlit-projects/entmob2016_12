@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
 using ProjectEnt_SensorTag.SensorTagLib;
+using ProjectEnt_SensorTag.SensorTagLib.Devices;
 using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,11 @@ namespace ProjectEnt_SensorTag.ViewModel
         public ObservableCollection<IDevice> DeviceList
         {
             get { return deviceList; }
-            set { deviceList = value; }
+            set
+            {
+                deviceList = value;
+                RaisePropertyChanged("DeviceList");
+            }
         }
 
         private INavigationService nav;
@@ -42,37 +47,57 @@ namespace ProjectEnt_SensorTag.ViewModel
             {
                 if (device != value)
                 {
-                    device = value;
+
+                    DeviceSetup.StopScanning();
                     Set(() => Device, ref device, value);
                   
                     nav.NavigateTo("SensorTagDetail");
                     Messenger.Default.Send<IDevice>(device);
+                    device = null;
                 }
             }
         }
-
+       
         public SensorTagViewModel(INavigationService nav)
         {
             this.nav = nav;
-            deviceList = new ObservableCollection<IDevice>();
-            refreshList = new RelayCommand(() => GetDeviceList());
+            refreshList = new RelayCommand(() =>
+            {
+                DeviceList = new ObservableCollection<IDevice>();
+                GetDeviceList();
+            }, () => Scanning);
         }
         public async void GetDeviceList()
         {
-            if (deviceList.Count > 0) DeviceList = new ObservableCollection<IDevice>();
-
             try
             {
-                var device = await DeviceSetup.FindDevice();
+                var device = await DeviceSetup.FindDevice((e) =>
+                {
+                    Scanning = e;
+                });
+
                 deviceList.Add(device);
             }
             catch
             {
 
             }
-        }    
-        private ICommand refreshList;
-        public ICommand RefreshList
+        }
+        private Boolean scanning = true;
+
+        public Boolean Scanning
+        {
+            get { return scanning; }
+            set
+            {
+                scanning = value;
+                refreshList.RaiseCanExecuteChanged();
+            }
+        }
+
+
+        private RelayCommand refreshList;
+        public RelayCommand RefreshList
         {
             get { return refreshList; }
             set { refreshList = value; }

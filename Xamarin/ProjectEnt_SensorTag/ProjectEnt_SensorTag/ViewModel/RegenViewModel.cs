@@ -13,6 +13,18 @@ namespace ProjectEnt_SensorTag.ViewModel
 {
     public class RegenViewModel : ViewModelBase
     {
+        private String infoText = "Haal Sensor Info op";
+
+        public String InfoText
+        {
+            get { return infoText; }
+            set
+            {
+                infoText = value;
+                RaisePropertyChanged("InfoText");
+            }
+        }
+
         private SensorTag sensorTag;
 
         public SensorTag SensorTag
@@ -36,7 +48,10 @@ namespace ProjectEnt_SensorTag.ViewModel
             this.nav = nav;
             
             sensorTag = new SensorTag();
-            getInfo = new RelayCommand(() => sensorTag.Temperature.Info());
+            getInfo = new RelayCommand(() => 
+            {
+                InfoText = "Verstuur naar de server";
+            });
         }
     }
 }

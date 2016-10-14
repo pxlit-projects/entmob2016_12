@@ -9,14 +9,8 @@ namespace ProjectEnt_SensorTag.Views
         public SensorTagOverview()
         {
             InitializeComponent();
-            BindingContext = App.Locator.SensorTagViewModel;
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            SensorTagViewModel vm = (SensorTagViewModel)BindingContext;
-            vm.RefreshList.Execute(null);
+            SensorTagViewModel vm = App.Locator.SensorTagViewModel;
+            BindingContext = vm;
         }
     }
 }

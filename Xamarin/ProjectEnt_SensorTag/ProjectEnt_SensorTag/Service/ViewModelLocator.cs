@@ -38,7 +38,6 @@ namespace ProjectEnt_SensorTag.ViewModel
         private const string sensorTagDetail = "SensorTagDetail";
         private const string sensorTagOverview = "SensorTagOverview";
         private const string regen = "Regen";
-
         public ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);

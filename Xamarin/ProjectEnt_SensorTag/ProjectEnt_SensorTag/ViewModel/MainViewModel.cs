@@ -24,28 +24,17 @@ namespace ProjectEnt_SensorTag.ViewModel
         /// </summary>
         private static bool connected = false;
 
-        public static bool Connected
+        public static bool Conntected
         {
             get { return connected; }
-            set { connected = value; }
+            set
+            {
+                connected = value;
+             }
         }
-
-        private ICommand logIn;
-        public ICommand LogIn
-        {
-            get { return logIn; }
-            set { logIn = value; }
-        }
-
-        private ICommand register;
-        public ICommand Register
-        {
-            get { return register; }
-            set { register = value; }
-        }
-
-        private ICommand sensorTag;
-        public ICommand SensorTag
+        
+        private RelayCommand sensorTag;
+        public RelayCommand SensorTag
         {
             get { return sensorTag; }
             set { sensorTag = value; }
@@ -58,25 +47,39 @@ namespace ProjectEnt_SensorTag.ViewModel
             set { nav = value; }
         }
 
-        private ICommand regen;
+        private RelayCommand regen;
 
-        public ICommand Regen
+        public RelayCommand Regen
         {
             get { return regen; }
             set { regen = value; }
         }
-
+        
         public MainViewModel(INavigationService nav)
         {
             this.nav = nav;
             // configure Navigation
             SensorTag = new RelayCommand(() =>
             {
-                this.nav.NavigateTo("SensorTagOverview");
+                if (!Conntected)
+                {
+                    this.nav.NavigateTo("SensorTagOverview");
+                }
+                else
+                {
+
+                }
             });
             Regen = new RelayCommand(() =>
             {
-                this.nav.NavigateTo("Regen");
+                if (Conntected)
+                {
+                    this.nav.NavigateTo("Regen");
+                }
+                else
+                {
+
+                }
             });
         }
     }
