@@ -3,12 +3,14 @@ package be.regendans.spring.services;
 import be.regendans.spring.daos.TemperatureDao;
 import be.regendans.spring.entities.Temperature;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
- * Created by Joren on 14/10/2016.
+ * @author Joren
  */
+@Service("TemperatureServiceImpl")
 public class TemperatureServiceImpl implements TemperatureService {
     @Autowired
     TemperatureDao temperatureDao;
