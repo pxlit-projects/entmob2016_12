@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectEnt_SensorTag {
+namespace ProjectEnt_SensorTag.View {
     using System;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;

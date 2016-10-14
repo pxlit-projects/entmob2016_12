@@ -1,22 +1,29 @@
-﻿using Robotics.Mobile.Core.Bluetooth.LE;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using ProjectEnt_SensorTag.SensorTagLib;
+using ProjectEnt_SensorTag.View;
+using ProjectEnt_SensorTag.ViewModel;
+using ProjectEnt_SensorTag.Views;
+using Robotics.Mobile.Core.Bluetooth.LE;
 using Xamarin.Forms;
 
 namespace ProjectEnt_SensorTag
 {
     public partial class App : Application
     {
-        public static IAdapter adapter { get; private set; }
+        private static ViewModelLocator locator = new ViewModelLocator();
+
+        public static ViewModelLocator Locator
+        {
+            get { return locator; }
+            set { locator = value; }
+        }
 
         public App()
         {
             InitializeComponent();
+            var firstPage = new NavigationPage(new Home());
 
-            MainPage = new Home();
+            Locator.nav.Initialize(firstPage);
+            MainPage = firstPage;
         }
 
         protected override void OnStart()
@@ -36,7 +43,7 @@ namespace ProjectEnt_SensorTag
 
         public static void SetAdapter(IAdapter phoneadapter)
         {
-            adapter = phoneadapter;
+            DeviceEssentials.localAdapter = phoneadapter;
         }
     }
 }
