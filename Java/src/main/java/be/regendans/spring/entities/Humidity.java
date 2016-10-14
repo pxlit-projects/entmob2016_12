@@ -1,33 +1,43 @@
 package be.regendans.spring.entities;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+/**
+ * @author Bunyamin
+ */
 
-@Entity(name="humidity")
-public class Humidity implements Serializable{
+@Entity
+@Table(name="humidity")
+public class Humidity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    @Column(name = "id")
     private int id;
 
-    @Column
+    @Column(name = "userid")
     private int userId;
 
-    @Column
+    @Column(name = "locationid")
     private int locationId;
 
-    @Column
+    @Column(name = "humidity")
     private float humidity;
 
-    @Column
+    @Column(name = "timestamp")
     private Timestamp timestamp;
+
+    @Override
+    public String toString(){
+        return "Humidity [id=" + id +
+                ", userid=" + userId +
+                ", locationid=" + locationId +
+                ", humidity=" + humidity +
+                ", timestamp=" + timestamp +
+                "}";
+    }
 
     public int getId() {
         return id;
@@ -67,12 +77,5 @@ public class Humidity implements Serializable{
 
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
-    }
-
-    @Override
-    public String toString(){
-        return "Humidity [id=" + id + ", userid=" + userId
-                + ", locationid=" + locationId + ", humidity=" + humidity
-                + ", timestamp=" + timestamp + "]";
     }
 }

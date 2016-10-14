@@ -1,33 +1,43 @@
 package be.regendans.spring.entities;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+/**
+ * @author Bunyamin
+ */
 
-@Entity(name="airPressure")
-public class AirPressure implements Serializable{
+@Entity
+@Table(name="airPressure")
+public class AirPressure{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    @Column(name = "id")
     private int id;
 
-    @Column
+    @Column(name = "userid")
     private int userId;
 
-    @Column
+    @Column(name = "locationid")
     private int locationId;
 
-    @Column
+    @Column(name = "pressure")
     private float pressure;
 
-    @Column
+    @Column(name = "timestamp")
     private Timestamp timestamp;
+
+    @Override
+    public String toString(){
+        return "Airpressure{id=" + id +
+                ", userid=" + userId +
+                ", locationid=" + locationId +
+                ", pressure=" + pressure +
+                ", timestamp=" + timestamp +
+                "}";
+    }
 
     public int getId() {
         return id;
@@ -67,12 +77,5 @@ public class AirPressure implements Serializable{
 
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
-    }
-
-    @Override
-    public String toString(){
-        return "Airpressure [id=" + id + ", userid=" + userId
-                + ", locationid=" + locationId + ", pressure=" + pressure
-                + ", timestamp=" + timestamp + "]";
     }
 }

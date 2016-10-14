@@ -1,28 +1,38 @@
 package be.regendans.spring.entities;
 
-import java.io.Serializable;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+/**
+ * @author Bunyamin
+ */
 
-@Entity(name="userLocation")
-public class UserLocation implements Serializable{
+@Entity
+@Table(name="userlocation")
+public class UserLocation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    @Column(name = "id")
     private int id;
 
-    @Column
-    private String userId;
+    @Column(name = "userid")
+    private int userId;
 
-    @Column
+    @Column(name = "latitude")
     private float latitude;
 
-    @Column
+    @Column(name = "longitude")
     private float longitude;
+
+    @Override
+    public String toString(){
+        return "UserLocation{" +
+                "id=" + id +
+                ", userid=" + userId +
+                ", latitude=" + latitude  +
+                ", longitude=" +longitude +
+                "}";
+    }
 
     public int getId() {
         return id;
@@ -32,11 +42,11 @@ public class UserLocation implements Serializable{
         this.id = id;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -54,11 +64,5 @@ public class UserLocation implements Serializable{
 
     public void setLongitude(float longitude) {
         this.longitude = longitude;
-    }
-
-    @Override
-    public String toString(){
-        return "Userlocation [id=" + id + "userid=" + userId +", latitude="
-                + latitude + ", longitude=" +longitude + "]";
     }
 }

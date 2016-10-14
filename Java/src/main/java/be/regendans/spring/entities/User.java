@@ -1,25 +1,34 @@
 package be.regendans.spring.entities;
 
-import java.io.Serializable;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+/**
+ * @author Bunyamin
+ */
 
-@Entity(name="user")
-public class User implements Serializable{
+@Entity
+@Table(name="user")
+public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    @Column(name = "id")
     private int id;
 
-    @Column
+    @Column(name = "username")
     private String username;
 
-    @Column
+    @Column(name = "password")
     private String password;
+
+    @Override
+    public String toString(){
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                "}";
+    }
 
     public int getId() {
         return id;
@@ -45,9 +54,4 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    @Override
-    public String toString(){
-        return "User [id=" + id + ", username=" + username
-                + ", password=" + password + "]";
-    }
 }
