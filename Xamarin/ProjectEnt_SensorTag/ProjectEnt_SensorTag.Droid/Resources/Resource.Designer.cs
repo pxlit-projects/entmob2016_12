@@ -26,6 +26,8 @@ namespace ProjectEnt_SensorTag.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLCrypto.Resource.String.ApplicationName = global::ProjectEnt_SensorTag.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::ProjectEnt_SensorTag.Droid.Resource.String.Hello;
 			global::Robotics.Mobile.Core.Resource.String.library_name = global::ProjectEnt_SensorTag.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ProjectEnt_SensorTag.Droid.Resource.Attribute.actionBarSize;
 		}
@@ -2943,6 +2945,12 @@ namespace ProjectEnt_SensorTag.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f080028
+			public const int ApplicationName = 2131230760;
+			
+			// aapt resource value: 0x7f080027
+			public const int Hello = 2131230759;
 			
 			// aapt resource value: 0x7f08000f
 			public const int abc_action_bar_home_description = 2131230735;

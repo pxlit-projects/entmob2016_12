@@ -83,9 +83,9 @@ namespace ProjectEnt_SensorTag.ViewModel
 
             }
         }
-        private Boolean scanning = true;
+        private bool scanning = true;
 
-        public Boolean Scanning
+        public bool Scanning
         {
             get { return scanning; }
             set
@@ -94,7 +94,6 @@ namespace ProjectEnt_SensorTag.ViewModel
                 refreshList.RaiseCanExecuteChanged();
             }
         }
-
 
         private RelayCommand refreshList;
         public RelayCommand RefreshList

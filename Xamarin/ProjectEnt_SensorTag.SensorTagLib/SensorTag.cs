@@ -1,19 +1,20 @@
 ﻿using GalaSoft.MvvmLight;
 using ProjectEnt_SensorTag.SensorTagLib.Sensors;
+using ProjectEnt_SensorTag.SensorTagLib.Services;
 
 namespace ProjectEnt_SensorTag.SensorTagLib
 {
     public class SensorTag : ObservableObject
     {
-        private TemperatureSensor temperature = new TemperatureSensor();
+        private TemperatureSensor temperaturesensor = new TemperatureSensor();
 
-        public TemperatureSensor Temperature
+        public TemperatureSensor TemperatureSensor
         {
-            get { return temperature; }
+            get { return temperaturesensor; }
             set
             {
-                temperature = value;
-                Set(() => Temperature, ref temperature, value);
+                temperaturesensor = value;
+                Set(() => TemperatureSensor, ref temperaturesensor, value);
             }
         }
         private HumiditySensor humiditySensor = new HumiditySensor();

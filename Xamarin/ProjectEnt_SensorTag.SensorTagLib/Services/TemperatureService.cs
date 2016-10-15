@@ -12,7 +12,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
     public class TemperatureService : DeviceSetup
     {
         protected static bool isCompleted = false;
-        public static void DiscoverServicesTemperature()
+        protected void DiscoverServicesTemperature()
         {
             IService service = services["Temperature"];
             int servicesDiscovered = 0;

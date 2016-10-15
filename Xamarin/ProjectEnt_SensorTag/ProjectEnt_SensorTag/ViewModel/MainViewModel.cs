@@ -1,6 +1,8 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
+using ProjectEnt_SensorTag.Model;
 using System.Windows.Input;
 
 namespace ProjectEnt_SensorTag.ViewModel
@@ -54,10 +56,42 @@ namespace ProjectEnt_SensorTag.ViewModel
             get { return regen; }
             set { regen = value; }
         }
-        
+
+        private User user;
+
+        public User User
+        {
+            get { return user; }
+            set
+            {
+                user = value;
+                RaisePropertyChanged(() => User);
+                Login.RaiseCanExecuteChanged();
+                Register.RaiseCanExecuteChanged();
+            }
+        }
+
+        private RelayCommand login;
+
+        public RelayCommand Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
+
+        private RelayCommand register;
+
+        public RelayCommand Register
+        {
+            get { return register; }
+            set { register = value; }
+        }
+
         public MainViewModel(INavigationService nav)
         {
             this.nav = nav;
+            Messenger.Default.Register<User>(this, (e) => User=e);
+
             // configure Navigation
             SensorTag = new RelayCommand(() =>
             {
@@ -67,7 +101,7 @@ namespace ProjectEnt_SensorTag.ViewModel
                 }
                 else
                 {
-
+                    Messenger.Default.Send("U bent al verbonden met de SensorTag");
                 }
             });
             Regen = new RelayCommand(() =>
@@ -75,12 +109,21 @@ namespace ProjectEnt_SensorTag.ViewModel
                 if (Conntected)
                 {
                     this.nav.NavigateTo("Regen");
+                    Messenger.Default.Send(User);
                 }
                 else
                 {
-
+                    Messenger.Default.Send("Meld u eerst aan en verbind met de sensorTag");
                 }
             });
+            Login = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("Login");
+            },() => User == null);
+            Register = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("Register");
+            }, () => User == null);
         }
     }
 }

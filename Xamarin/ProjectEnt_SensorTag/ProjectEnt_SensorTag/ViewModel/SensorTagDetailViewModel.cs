@@ -52,7 +52,7 @@ namespace ProjectEnt_SensorTag.ViewModel
         {
             MainViewModel.Conntected = true;
             DeviceEssentials.device = device;
-            TemperatureService.DiscoverServicesTemperature();
+            DeviceSetup.ConnectToDevice();
 
             nav.GoBack();
             nav.GoBack();

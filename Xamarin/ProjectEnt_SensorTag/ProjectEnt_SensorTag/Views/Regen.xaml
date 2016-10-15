@@ -6,17 +6,16 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                 <Label Text="The temperature is: " />
-                <Label Text="{Binding SensorTag.Temperature.Degree}" />
+                <Label Text="{Binding SensorTag.TemperatureSensor.Degree}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                 <Label Text="The Humidity is: " />
                 <Label Text="{Binding SensorTag.HumiditySensor.Humidity}" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            <!--<StackLayout Orientation="Horizontal" VerticalOptions="Center">
                 <Label Text="The Barometer is: " />
                 <Label Text="{Binding SensorTag.Barometer.Humidity}" />
-            </StackLayout>
-            <Entry Placeholder="Naam" Margin="5"/>
+            </StackLayout>-->
             <Button x:Name="getInfoButton" Command="{Binding GetInfo,Mode=TwoWay}" Text="{Binding InfoText, Mode=TwoWay}" />
         </StackLayout>
     </ContentPage.Content>

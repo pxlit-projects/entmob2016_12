@@ -38,6 +38,9 @@ namespace ProjectEnt_SensorTag.ViewModel
         private const string sensorTagDetail = "SensorTagDetail";
         private const string sensorTagOverview = "SensorTagOverview";
         private const string regen = "Regen";
+        private const string login = "Login";
+        private const string register = "Register";
+
         public ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
@@ -47,6 +50,8 @@ namespace ProjectEnt_SensorTag.ViewModel
             nav.Configure(sensorTagDetail, typeof(SensorTagDetail));
             nav.Configure(sensorTagOverview, typeof(SensorTagOverview));
             nav.Configure(regen, typeof(Regen));
+            nav.Configure(login, typeof(Login));
+            nav.Configure(register, typeof(Register));
 
             SimpleIoc.Default.Register<INavigationService>(() => nav);
 
@@ -54,6 +59,8 @@ namespace ProjectEnt_SensorTag.ViewModel
             SimpleIoc.Default.Register<SensorTagViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<RegenViewModel>();
+            SimpleIoc.Default.Register<LoginViewModel>();
+            SimpleIoc.Default.Register<RegisterViewModel>();
         }
 
         public NavigationService nav;
@@ -85,9 +92,29 @@ namespace ProjectEnt_SensorTag.ViewModel
                 return ServiceLocator.Current.GetInstance<RegenViewModel>();
             }
         }
+        public RegisterViewModel RegisterViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<RegisterViewModel>();
+            }
+        }
+        public LoginViewModel LoginViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<LoginViewModel>();
+            }
+        }
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
+            SimpleIoc.Default.Unregister<SensorTagDetailViewModel>();
+            SimpleIoc.Default.Unregister<SensorTagViewModel>();
+            SimpleIoc.Default.Unregister<MainViewModel>();
+            SimpleIoc.Default.Unregister<RegenViewModel>();
+            SimpleIoc.Default.Unregister<LoginViewModel>();
+            SimpleIoc.Default.Unregister<RegisterViewModel>();
         }
     }
 }

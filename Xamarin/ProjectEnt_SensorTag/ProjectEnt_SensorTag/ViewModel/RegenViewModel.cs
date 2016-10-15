@@ -1,6 +1,8 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
+using ProjectEnt_SensorTag.Model;
 using ProjectEnt_SensorTag.SensorTagLib;
 using System;
 using System.Collections.Generic;
@@ -42,14 +44,24 @@ namespace ProjectEnt_SensorTag.ViewModel
         }
 
         private INavigationService nav;
-        
+
+        private User user;
+
+        public User User
+        {
+            get { return user; }
+            set { user = value; }
+        }
+
         public RegenViewModel(INavigationService nav)
         {
             this.nav = nav;
-            
+            Messenger.Default.Register<User>(this, (e) => User = e);
+
             sensorTag = new SensorTag();
             getInfo = new RelayCommand(() => 
             {
+                SensorTag.TemperatureSensor.GetTemperature();
                 InfoText = "Verstuur naar de server";
             });
         }

@@ -1,4 +1,5 @@
-﻿using ProjectEnt_SensorTag.ViewModel;
+﻿using GalaSoft.MvvmLight.Messaging;
+using ProjectEnt_SensorTag.ViewModel;
 using ProjectEnt_SensorTag.Views;
 using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
@@ -17,6 +18,21 @@ namespace ProjectEnt_SensorTag.View
         {
             InitializeComponent();
             BindingContext = App.Locator.Main;
+
+        }
+        private void ShowWindow(string message)
+        {
+            DisplayAlert("Alert", message, "Ok");
+        }
+        protected override void OnDisappearing()
+        {
+            Messenger.Default.Unregister<string>(this);
+            base.OnDisappearing();
+        }
+        protected override void OnAppearing()
+        {
+            Messenger.Default.Register<string>(this, ShowWindow);
+            base.OnAppearing();
         }
     }
 }

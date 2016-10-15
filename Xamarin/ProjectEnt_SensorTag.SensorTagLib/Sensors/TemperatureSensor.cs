@@ -1,4 +1,5 @@
-﻿using ProjectEnt_SensorTag.SensorTagLib.Services;
+﻿using ProjectEnt_SensorTag.Model;
+using ProjectEnt_SensorTag.SensorTagLib.Services;
 using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,14 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
             DiscoverServicesTemperature();
         }
 
-        private void CalculateTemperature()
+        public Temperature GetTemperature()
+        {
+            Temperature temp = new Temperature();
+            Degree = CalculateTemperature();
+            temp.TemperatureAmount = Degree;
+            return temp;
+        }
+        private double CalculateTemperature()
         {
             var data = temperatureChar.Value;
 
@@ -52,7 +60,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
             double ambient = (double)it * SCALE_LSB;
 
             Debug.WriteLine("ambient: " + ambient + "\nIR: " + ir + " C");
-            Degree = ir;
+            return ir;
         }
     }
 }
