@@ -25,6 +25,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
                     {
                         Debug.WriteLine("Characteristic discovered: " + characteristic.Name);
                         temperatureChar = characteristic;
+                     
                         servicesDiscovered++;
                     }
                     if (characteristic.ID == temperatureCharacteristicConfigUuid)
@@ -46,8 +47,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
 
             service.DiscoverCharacteristics();
 
-            temperatureCharConfig.Write(new byte[] { 0x01 }); // Turn ON
-            temperatureChar.StartUpdates();
+         
         }
     }
 }

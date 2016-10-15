@@ -34,16 +34,25 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
         public TemperatureSensor()
         {
             DiscoverServicesTemperature();
+
+            if (temperatureChar != null)
+            {
+                temperatureChar.ValueUpdated += (object sender, CharacteristicReadEventArgs e) =>
+                {
+                    double ambient, infrared;
+                    CalculateTemperature();
+                };
+            }
         }
 
         public Temperature GetTemperature()
         {
-            Temperature temp = new Temperature();
-            Degree = CalculateTemperature();
-            temp.TemperatureAmount = Degree;
-            return temp;
+
+            temperatureCharConfig.Write(new byte[] { 0x01 }); // Turn ON
+            temperatureChar.StartUpdates();
+            return null;
         }
-        private double CalculateTemperature()
+        private void CalculateTemperature()
         {
             var data = temperatureChar.Value;
 
@@ -60,7 +69,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
             double ambient = (double)it * SCALE_LSB;
 
             Debug.WriteLine("ambient: " + ambient + "\nIR: " + ir + " C");
-            return ir;
+            Degree = ir;
         }
     }
 }
