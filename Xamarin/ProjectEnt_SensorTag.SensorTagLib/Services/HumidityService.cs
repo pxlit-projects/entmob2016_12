@@ -23,19 +23,19 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
                     if (characteristic.ID == humidityCharacteristicUuid)
                     {
                         Debug.WriteLine("Characteristic discovered: " + characteristic.Name);
-                        temperatureChar = characteristic;
+                        humidityChar = characteristic;
                         servicesDiscovered++;
                     }
                     if (characteristic.ID == humidityCharacteristicConfigUuid)
                     {
                         Debug.WriteLine("Characteristic discovered: " + characteristic.Name);
-                        temperatureCharConfig = characteristic;
+                        humidityCharConfig = characteristic;
                         servicesDiscovered++;
                     }
                     if (characteristic.ID == humidityCharacteristicPeriodUuid)
                     {
                         Debug.WriteLine("Characteristic discovered: " + characteristic.Name);
-                        temperatureCharPeriod = characteristic;
+                        humidityCharPeriod = characteristic;
                         servicesDiscovered++;
                     }
                 }

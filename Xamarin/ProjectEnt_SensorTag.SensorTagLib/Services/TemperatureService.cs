@@ -12,7 +12,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
     public class TemperatureService : DeviceSetup
     {
         protected static bool isCompleted = false;
-        protected void DiscoverServicesTemperature()
+        protected static void DiscoverServicesTemperature()
         {
             IService service = services["Temperature"];
             int servicesDiscovered = 0;
@@ -25,7 +25,6 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
                     {
                         Debug.WriteLine("Characteristic discovered: " + characteristic.Name);
                         temperatureChar = characteristic;
-                     
                         servicesDiscovered++;
                     }
                     if (characteristic.ID == temperatureCharacteristicConfigUuid)
@@ -47,7 +46,6 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
 
             service.DiscoverCharacteristics();
 
-         
         }
     }
 }

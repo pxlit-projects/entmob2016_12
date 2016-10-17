@@ -5,18 +5,18 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                <Label Text="The temperature is: " />
-                <Label Text="{Binding SensorTag.TemperatureSensor.Degree}" />
+                <Label Text="De temperature is: " />
+                <Label Text="{Binding SensorTag.TemperatureSensor.Temperature.TemperatureAmount}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                <Label Text="The Humidity is: " />
-                <Label Text="{Binding SensorTag.HumiditySensor.Humidity}" />
+                <Label Text="De Humidity is: " />
+                <Label Text="{Binding SensorTag.HumiditySensor.Humidity.HumidityAmount}" />
             </StackLayout>
-            <!--<StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                <Label Text="The Barometer is: " />
-                <Label Text="{Binding SensorTag.Barometer.Humidity}" />
-            </StackLayout>-->
-            <Button x:Name="getInfoButton" Command="{Binding GetInfo,Mode=TwoWay}" Text="{Binding InfoText, Mode=TwoWay}" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Button Command="{Binding GetTemp}" Text="Haal Temperature" />
+                <Button Command="{Binding GetHumidity}" Text="Haal Humidity" />
+            </StackLayout>
+            <Button x:Name="getInfoButton" Command="{Binding GetInfo,Mode=TwoWay}" Text="Verstuur naar de server" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

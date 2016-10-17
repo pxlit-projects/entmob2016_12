@@ -15,14 +15,14 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private double degree = 0;
-        public double Degree
+        private Temperature temperature = new Temperature();
+        public Temperature Temperature
         {
-            get { return degree; }
+            get { return temperature; }
             set
             {
-                degree = value;
-                RaisePropertyChanged("Degree");
+                temperature = value;
+                RaisePropertyChanged("Temperature");
             }
         }
 
@@ -34,26 +34,19 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
         public TemperatureSensor()
         {
             DiscoverServicesTemperature();
-
-            if (temperatureChar != null)
-            {
-                temperatureChar.ValueUpdated += (object sender, CharacteristicReadEventArgs e) =>
-                {
-                    double ambient, infrared;
-                    CalculateTemperature();
-                };
-            }
         }
 
-        public Temperature GetTemperature()
+        public void GetTemperature()
         {
-
-            temperatureCharConfig.Write(new byte[] { 0x01 }); // Turn ON
+            temperatureCharConfig.Write(new byte[] { 0x01 });
             temperatureChar.StartUpdates();
-            return null;
+            Temperature.TemperatureAmount = CalculateTemperature();
+            temperatureChar.StopUpdates();
+            temperatureCharConfig.Write(new byte[] { 0x00 });
         }
-        private void CalculateTemperature()
+        private Double CalculateTemperature()
         {
+            if (temperatureChar.Value == null) return 0;
             var data = temperatureChar.Value;
 
             short objTemp = (short)((short)data[0] + (short)(data[1] << 8));
@@ -69,7 +62,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
             double ambient = (double)it * SCALE_LSB;
 
             Debug.WriteLine("ambient: " + ambient + "\nIR: " + ir + " C");
-            Degree = ir;
+            return ir;
         }
     }
 }
