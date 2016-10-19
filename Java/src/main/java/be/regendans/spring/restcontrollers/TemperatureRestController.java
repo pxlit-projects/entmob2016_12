@@ -24,7 +24,7 @@ public class TemperatureRestController {
     public Temperature getTemperatureById(@PathVariable("id") int id){ return temperatureService.getTemperatureById(id);}
 
     @RequestMapping(value = "/del/{id}", method = RequestMethod.DELETE, produces = "application/json")
-    public String delTemperatureById(@PathVariable("id") int id) { return temperatureService.deltemperatureById(id); }
+    public String delTemperatureById(@PathVariable("id") int id) { return temperatureService.delTemperatureById(id); }
 
     @RequestMapping(value = "/upd", method = RequestMethod.PUT , headers = "content-type=application/json" , consumes = "application/json", produces = "application/json")
     public Temperature updateTemperature(@RequestBody Temperature t) {return temperatureService.updateTemperature(t); }

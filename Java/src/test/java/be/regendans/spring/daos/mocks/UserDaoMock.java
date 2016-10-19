@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * @author Bunyamin
  */
+
 public class UserDaoMock implements UserDao {
 
     private boolean getUserByIdIsCalled = false;

@@ -13,5 +13,5 @@ public interface TemperatureService {
     List<Temperature> getAllUserTemperatures(int userId);
     Temperature updateTemperature(Temperature t);
     Temperature newTemperature(Temperature t);
-    String deltemperatureById(int id);
+    String delTemperatureById(int id);
 }

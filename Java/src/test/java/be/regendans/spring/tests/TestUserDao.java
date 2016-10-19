@@ -49,6 +49,6 @@ public class TestUserDao {
     @Test
     public void testNewUser(){
         userDaoMock.newUser(null);
-        Assert.assertTrue(userDaoMock.isGetAllUsersCalled());
+        Assert.assertTrue(userDaoMock.isNewUserCalled());
     }
 }
