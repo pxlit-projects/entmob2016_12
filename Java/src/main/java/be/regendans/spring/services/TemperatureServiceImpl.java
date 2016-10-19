@@ -40,7 +40,7 @@ public class TemperatureServiceImpl implements TemperatureService {
     }
 
     @Override
-    public String deltemperatureById(int id) {
+    public String delTemperatureById(int id) {
         return temperatureDao.deltemperatureById(id);
     }
 }

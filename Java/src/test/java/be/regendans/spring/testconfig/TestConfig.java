@@ -1,6 +1,7 @@
 package be.regendans.spring.testconfig;
 
 import be.regendans.spring.daos.mocks.*;
+import be.regendans.spring.services.TemperatureServiceImpl;
 import be.regendans.spring.services.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +18,11 @@ public class TestConfig {
 
     @Bean
     UserDaoMock userDaoMock() { return new UserDaoMock(); }
+
+    @Bean
+    TemperatureServiceImpl temperatureServiceImplMock(){return  new TemperatureServiceImpl();}
+    @Bean
+    TemperatureDaoMock temperatureDaoMock(){return  new TemperatureDaoMock();}
 
     // TODO: add test for AirPressure later
     // TODO: add test for Humidity later
