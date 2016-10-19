@@ -1,6 +1,8 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
+using ProjectEnt_SensorTag.Model;
 using System.Windows.Input;
 
 namespace ProjectEnt_SensorTag.ViewModel
@@ -24,28 +26,17 @@ namespace ProjectEnt_SensorTag.ViewModel
         /// </summary>
         private static bool connected = false;
 
-        public static bool Connected
+        public static bool Conntected
         {
             get { return connected; }
-            set { connected = value; }
+            set
+            {
+                connected = value;
+             }
         }
-
-        private ICommand logIn;
-        public ICommand LogIn
-        {
-            get { return logIn; }
-            set { logIn = value; }
-        }
-
-        private ICommand register;
-        public ICommand Register
-        {
-            get { return register; }
-            set { register = value; }
-        }
-
-        private ICommand sensorTag;
-        public ICommand SensorTag
+        
+        private RelayCommand sensorTag;
+        public RelayCommand SensorTag
         {
             get { return sensorTag; }
             set { sensorTag = value; }
@@ -58,26 +49,81 @@ namespace ProjectEnt_SensorTag.ViewModel
             set { nav = value; }
         }
 
-        private ICommand regen;
+        private RelayCommand regen;
 
-        public ICommand Regen
+        public RelayCommand Regen
         {
             get { return regen; }
             set { regen = value; }
         }
 
+        private User user;
+
+        public User User
+        {
+            get { return user; }
+            set
+            {
+                user = value;
+                RaisePropertyChanged(() => User);
+                Login.RaiseCanExecuteChanged();
+                Register.RaiseCanExecuteChanged();
+            }
+        }
+
+        private RelayCommand login;
+
+        public RelayCommand Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
+
+        private RelayCommand register;
+
+        public RelayCommand Register
+        {
+            get { return register; }
+            set { register = value; }
+        }
+
         public MainViewModel(INavigationService nav)
         {
             this.nav = nav;
+            Messenger.Default.Register<User>(this, (e) => User=e);
+
             // configure Navigation
             SensorTag = new RelayCommand(() =>
             {
-                this.nav.NavigateTo("SensorTagOverview");
+                if (!Conntected)
+                {
+                    this.nav.NavigateTo("SensorTagOverview");
+                }
+                else
+                {
+                    Messenger.Default.Send("U bent al verbonden met de SensorTag");
+                }
             });
             Regen = new RelayCommand(() =>
             {
-                this.nav.NavigateTo("Regen");
+                if (Conntected)
+                {
+                    this.nav.NavigateTo("Regen");
+                    Messenger.Default.Send(User);
+                }
+                else
+                {
+                    Messenger.Default.Send("Meld u eerst aan en verbind met de sensorTag");
+                }
             });
+            Login = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("Login");
+            },() => User == null);
+            Register = new RelayCommand(() =>
+            {
+                this.nav.NavigateTo("Register");
+            }, () => User == null);
         }
     }
 }

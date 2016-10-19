@@ -1,4 +1,6 @@
-﻿using ProjectEnt_SensorTag.SensorTagLib;
+﻿
+using ProjectEnt_SensorTag.SensorTagLib;
+using ProjectEnt_SensorTag.SensorTagLib.Devices;
 using ProjectEnt_SensorTag.View;
 using ProjectEnt_SensorTag.ViewModel;
 using ProjectEnt_SensorTag.Views;
@@ -20,6 +22,7 @@ namespace ProjectEnt_SensorTag
         public App()
         {
             InitializeComponent();
+      
             var firstPage = new NavigationPage(new Home());
 
             Locator.nav.Initialize(firstPage);

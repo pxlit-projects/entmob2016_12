@@ -1,11 +1,12 @@
-﻿using Robotics.Mobile.Core.Bluetooth.LE;
+﻿using GalaSoft.MvvmLight;
+using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectEnt_SensorTag.SensorTagLib
+namespace ProjectEnt_SensorTag.SensorTagLib.Devices
 {
     public class DeviceEssentials
     {
@@ -20,6 +21,16 @@ namespace ProjectEnt_SensorTag.SensorTagLib
         protected static ICharacteristic temperatureChar;
         protected static ICharacteristic temperatureCharConfig;
         protected static ICharacteristic temperatureCharPeriod;
+        #endregion
+        #region humidity
+        protected static Guid humidityServiceUuid = Guid.Parse("f000aa20-0451-4000-b000-000000000000");
+        protected static Guid humidityCharacteristicUuid = Guid.Parse("f000aa21-0451-4000-b000-000000000000");
+        protected static Guid humidityCharacteristicConfigUuid = Guid.Parse("f000aa22-0451-4000-b000-000000000000");
+        protected static Guid humidityCharacteristicPeriodUuid = Guid.Parse("f000aa23-0451-4000-b000-000000000000");
+
+        protected static ICharacteristic humidityChar;
+        protected static ICharacteristic humidityCharConfig;
+        protected static ICharacteristic humidityCharPeriod;
         #endregion
     }
 }

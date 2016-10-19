@@ -1,4 +1,5 @@
-﻿using Robotics.Mobile.Core.Bluetooth.LE;
+﻿using ProjectEnt_SensorTag.SensorTagLib.Devices;
+using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,7 +12,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
     public class TemperatureService : DeviceSetup
     {
         protected static bool isCompleted = false;
-        public static void DiscoverServicesTemperature()
+        protected static void DiscoverServicesTemperature()
         {
             IService service = services["Temperature"];
             int servicesDiscovered = 0;
@@ -45,30 +46,6 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Services
 
             service.DiscoverCharacteristics();
 
-            temperatureCharConfig.Write(new byte[] { 0x01 }); // Turn ON
-            temperatureChar.StartUpdates();
-        }
-        public static void ConnectToDevice()
-        {
-            localAdapter.DeviceConnected += (sender, e) =>
-            {
-                device = e.Device;
-
-                device.ServicesDiscovered += (object se, EventArgs ea) =>
-                {
-                    foreach (var service in device.Services)
-                    {
-                        if (service.ID == temperatureServiceUuid)
-                        {
-                            services.Add("Temperature", service);
-                        }
-                    }
-                };
-
-                device.DiscoverServices();
-            };
-
-            localAdapter.ConnectToDevice(device);
         }
     }
 }

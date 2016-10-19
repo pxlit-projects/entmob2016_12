@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
 using ProjectEnt_SensorTag.SensorTagLib;
+using ProjectEnt_SensorTag.SensorTagLib.Devices;
 using ProjectEnt_SensorTag.SensorTagLib.Services;
 using Robotics.Mobile.Core.Bluetooth.LE;
 using System;
@@ -22,7 +23,8 @@ namespace ProjectEnt_SensorTag.ViewModel
         public IDevice Device
         {
             get { return device; }
-            set {
+            set
+            {
                 device = value;
                 RaisePropertyChanged(() => Device);
             }
@@ -48,8 +50,9 @@ namespace ProjectEnt_SensorTag.ViewModel
 
         private void ConntectToService()
         {
+            MainViewModel.Conntected = true;
             DeviceEssentials.device = device;
-            TemperatureService.ConnectToDevice();
+            DeviceSetup.ConnectToDevice();
 
             nav.GoBack();
             nav.GoBack();

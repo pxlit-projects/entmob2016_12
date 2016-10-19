@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace ProjectEnt_SensorTag.Model
     public class User
     {
         [Key]
+        [JsonProperty("Id")]
         public int Id { get; set; }
+        [JsonProperty("Username")]
         public String Username { get; set; }
+        [JsonProperty("Password")]
         public String Password { get; set; }
-        public String Salt { get; set; }
     }
 }

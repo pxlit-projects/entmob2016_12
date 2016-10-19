@@ -4,11 +4,19 @@
              x:Class="ProjectEnt_SensorTag.Views.Regen">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="The temperature is: " />
-                <Label Text="{Binding SensorTag.Temperature.Degree}" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="De temperature is: " />
+                <Label Text="{Binding SensorTag.TemperatureSensor.Temperature.TemperatureAmount}" />
             </StackLayout>
-            <Button x:Name="getInfoButton" Command="{Binding GetInfo,Mode=TwoWay}" Text="Activate Sensor" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="De Humidity is: " />
+                <Label Text="{Binding SensorTag.HumiditySensor.Humidity.HumidityAmount}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Button Command="{Binding GetTemp}" Text="Haal Temperature" />
+                <Button Command="{Binding GetHumidity}" Text="Haal Humidity" />
+            </StackLayout>
+            <Button x:Name="getInfoButton" Command="{Binding GetInfo,Mode=TwoWay}" Text="Verstuur naar de server" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

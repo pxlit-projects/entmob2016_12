@@ -12,7 +12,7 @@ namespace ProjectEnt_SensorTag.Model
         public int Id { get; set; }
         public int UserId { get; set; }
         public int LocationId { get; set; }
-        public int TemperatureAmount { get; set; }
+        public Double TemperatureAmount { get; set; }
         [Timestamp]
         public Byte[] Timestamp { get; set; }
     }
