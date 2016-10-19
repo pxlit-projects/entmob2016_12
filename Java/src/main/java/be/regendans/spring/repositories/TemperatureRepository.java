@@ -39,10 +39,10 @@ public class TemperatureRepository implements TemperatureDao{
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         Query q =  em.createQuery("SELECT t  FROM Temperature t");
-        List<Temperature> ls = q.getResultList();
+        List<Temperature> lt = q.getResultList();
         tx.commit();
         em.close();
-        return ls;
+        return lt;
     }
 
     @Override
@@ -51,10 +51,10 @@ public class TemperatureRepository implements TemperatureDao{
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         Query q =  em.createQuery("SELECT t  FROM Temperature t WHERE t.userId = ?1").setParameter(1, userId);
-        List<Temperature> ls = q.getResultList();
+        List<Temperature> lt = q.getResultList();
         tx.commit();
         em.close();
-        return ls;
+        return lt;
     }
 
     @Override

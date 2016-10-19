@@ -3,6 +3,7 @@ package be.regendans.spring.restcontrollers;
 import be.regendans.spring.entities.Temperature;
 import be.regendans.spring.services.TemperatureService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,12 +13,17 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/temperature")
+@Secured("ROLE_USER")
 public class TemperatureRestController {
+
     @Autowired
     private TemperatureService temperatureService;
 
     @RequestMapping(value ="/all",method = RequestMethod.GET, produces = "application/json")
     public List<Temperature> getAll(){ return temperatureService.getAllTemperatures(); }
+
+    @RequestMapping(value ="/all/{id}",method = RequestMethod.GET, produces = "application/json")
+    public List<Temperature> getAllByUserId(@PathVariable("id") int id){ return temperatureService.getAllUserTemperatures(id); }
 
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = "application/json")
