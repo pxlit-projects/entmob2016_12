@@ -119,7 +119,6 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.SensorTagLib.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\GalaSoft.MvvmLight.Extras.dll
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Network.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.pdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Behaviors.pdb
@@ -149,7 +148,6 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Proje
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\GalaSoft.MvvmLight.Extras.xml
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\ProjectEnt_SensorTag.Network.pdb
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\bin\Debug\System.ComponentModel.Annotations.xml
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\ProjectEnt_SensorTag.Droid.csprojResolveAssemblyReference.cache
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.Droid\obj\Debug\ProjectEnt_SensorTag.Droid.dll

@@ -64,7 +64,11 @@ namespace ProjectEnt_SensorTag.ViewModel
             this.nav = nav;
             Messenger.Default.Register<User>(this, (e) => User = e);
 
+            if(nav != null)
+            { 
             sensorTag = new SensorTag();
+            }
+
             getInfo = new RelayCommand(() => 
             {
                  SendMessage.PostRequest<object, Humidity>("Somewhere",sensorTag.HumiditySensor.Humidity);

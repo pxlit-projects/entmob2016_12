@@ -55,6 +55,7 @@ namespace ProjectEnt_SensorTag.ViewModel
             Login = new RelayCommand(() =>
             {
                 Connect = false;
+
                 try
                 {
                     User.Password = hashedPassword(User.Password);
@@ -79,7 +80,7 @@ namespace ProjectEnt_SensorTag.ViewModel
         }
         public String hashedPassword(String pass)
         {
-            if (pass == null) pass = "random";
+            if (pass == null) return "random";
             var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha1);
             byte[] inputBytes = Encoding.UTF8.GetBytes(pass);
             byte[] hash = hasher.HashData(inputBytes);
