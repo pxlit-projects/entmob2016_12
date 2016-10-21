@@ -64,17 +64,19 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Devices
             localAdapter.DeviceConnected += (sender, e) =>
             {
                 device = e.Device;
-
+                
                 device.ServicesDiscovered += (object se, EventArgs ea) =>
                 {
                     foreach (var service in device.Services)
                     {
                         if (service.ID == temperatureServiceUuid)
                         {
+                            if(!services.ContainsKey("Temperature"))
                             services.Add("Temperature", service);
                         }
                         if (service.ID == humidityServiceUuid)
                         {
+                            if(!services.ContainsKey("Humidity"))
                             services.Add("Humidity", service);
                         }
                     }

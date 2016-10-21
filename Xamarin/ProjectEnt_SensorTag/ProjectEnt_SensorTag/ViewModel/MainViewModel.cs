@@ -116,7 +116,7 @@ namespace ProjectEnt_SensorTag.ViewModel
                     catch
                     {
                         Messenger.Default.Send("Unknown error restart connection");
-                        SensorTag = null;
+                        Conntected = false;
                     }
                 }
                 else
