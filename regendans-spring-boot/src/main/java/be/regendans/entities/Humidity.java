@@ -20,7 +20,7 @@ public class Humidity{
     @Column(name = "userid")
     private int userId;
 
-    @Column(name = "locationid")
+    @Column(name = "location_id")
     private int locationId;
 
     @Column(name = "humidity")

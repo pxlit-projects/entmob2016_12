@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="airPressure")
+@Table(name="airpressure")
 public class AirPressure{
 
     @Id
