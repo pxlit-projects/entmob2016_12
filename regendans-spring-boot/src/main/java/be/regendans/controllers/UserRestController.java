@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author Bunyamin
+ */
+
 @RestController
 @RequestMapping("/user")
 public class UserRestController {

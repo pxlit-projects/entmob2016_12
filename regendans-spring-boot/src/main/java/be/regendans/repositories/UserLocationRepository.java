@@ -3,7 +3,7 @@ package be.regendans.repositories;
 import be.regendans.entities.UserLocation;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
+import java.util.List;
 
 /**
  * @author Bunyamin
@@ -11,6 +11,6 @@ import java.util.Optional;
 
 public interface UserLocationRepository extends JpaRepository<UserLocation, Integer> {
 
-    Optional<UserLocation> findByUserId(int userId);
+    List<UserLocation> findByUserId(int userId);
 
 }
