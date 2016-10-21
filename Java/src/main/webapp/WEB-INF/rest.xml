@@ -22,37 +22,34 @@
 
     <context:component-scan base-package="be.regendans.spring.restcontrollers"/>
 
+    <aop:aspectj-autoproxy/>
+    <aop:config proxy-target-class="true"/>
 
-    <aop:aspectj-autoproxy />
-    <aop:config proxy-target-class="true" />
-
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
     <bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost/regendans" />
-
-        <property name="username" value="root" />
-
-        <property name="password" value="" />
-
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
     </bean>
 
     <security:global-method-security secured-annotations="enabled" />
 
     <security:http auto-config="true">
-        <security:http-basic />
-        <security:csrf disabled="true" />
+        <security:http-basic/>
+        <security:csrf disabled="true"/>
     </security:http>
 
     <security:authentication-manager>
         <security:authentication-provider>
-            <security:password-encoder hash="sha-256" />
+            <security:password-encoder hash="sha-256" base64="true"/>
             <security:user-service>
-
+                <security:user name="admin" password="5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"  authorities="ROLE_ADMIN" />
+                <security:user name="user" password="5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"  authorities="ROLE_USER" />
+                <security:user name="public" password="5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"  authorities="ROLE_PUBLIC" />
             </security:user-service>
         </security:authentication-provider>
     </security:authentication-manager>
-
 
 </beans>

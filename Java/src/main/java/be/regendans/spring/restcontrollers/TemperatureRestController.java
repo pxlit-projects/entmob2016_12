@@ -25,7 +25,6 @@ public class TemperatureRestController {
     @RequestMapping(value ="/all/{id}",method = RequestMethod.GET, produces = "application/json")
     public List<Temperature> getAllByUserId(@PathVariable("id") int id){ return temperatureService.getAllUserTemperatures(id); }
 
-
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = "application/json")
     public Temperature getTemperatureById(@PathVariable("id") int id){ return temperatureService.getTemperatureById(id);}
 
@@ -37,5 +36,4 @@ public class TemperatureRestController {
 
     @RequestMapping(value = "/new", method = RequestMethod.POST , headers = "content-type=application/json", consumes = "application/json", produces = "application/json")
     public Temperature newTemperature(@RequestBody Temperature t) {return temperatureService.newTemperature(t); }
-
 }

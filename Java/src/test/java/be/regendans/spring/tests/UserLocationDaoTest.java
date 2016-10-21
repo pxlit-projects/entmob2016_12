@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {TestConfig.class})
 @DirtiesContext
-public class TestUserLocationDao {
+public class UserLocationDaoTest {
 
     @Autowired
     UserLocationDaoMock userLocationDaoMock;
