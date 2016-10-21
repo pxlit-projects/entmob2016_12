@@ -17,16 +17,18 @@ public class TestConfig {
     UserServiceImpl userServiceImplMock() { return new UserServiceImpl(); }
     @Bean
     UserDaoMock userDaoMock() { return new UserDaoMock(); }
-
-    // TODO: add test for AirPressure later
-
-    // TODO: add test for Humidity later
-
+    @Bean
+    HumidityServiceImpl humidityServiceImplMock(){return  new HumidityServiceImpl();}
+    @Bean
+    HumidityDaoMock humidityDaoMock(){return new HumidityDaoMock();}
+    @Bean
+    AirPressureServiceImpl airPressureServiceImplMock(){return new AirPressureServiceImpl();}
+    @Bean
+    AirPressureDaoMock airPressureDaoMock(){return new AirPressureDaoMock();}
     @Bean
     TemperatureServiceImpl temperatureServiceImplMock(){ return  new TemperatureServiceImpl(); }
     @Bean
     TemperatureDaoMock temperatureDaoMock(){ return  new TemperatureDaoMock(); }
-
     @Bean
     UserLocationServiceImpl userLocationServiceImplMock() { return new UserLocationServiceImpl(); }
     @Bean

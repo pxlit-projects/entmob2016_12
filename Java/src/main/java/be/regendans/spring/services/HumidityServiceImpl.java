@@ -11,7 +11,7 @@ import java.util.List;
  * @author Joren
  */
 @Service("HumidityServiceImpl")
-public class HumidityserviceImpl implements HumidityService {
+public class HumidityServiceImpl implements HumidityService {
     @Autowired
     HumidityDao humidityDao;
     @Override
