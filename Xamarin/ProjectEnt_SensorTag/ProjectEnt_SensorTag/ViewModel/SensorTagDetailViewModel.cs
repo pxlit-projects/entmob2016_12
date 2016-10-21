@@ -39,13 +39,8 @@ namespace ProjectEnt_SensorTag.ViewModel
         public SensorTagDetailViewModel(INavigationService nav)
         {
             this.nav = nav;
-            Messenger.Default.Register<IDevice>(this,GetDevice);
+            Messenger.Default.Register<IDevice>(this,(e) => Device = e);
             connectToService = new RelayCommand(ConntectToService);
-        }
-
-        private void GetDevice(IDevice device)
-        {
-            Device = device;
         }
 
         private void ConntectToService()

@@ -96,6 +96,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataLayer\SensorContext.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -128,6 +129,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ProjectEnt_SensorTag.Model\ProjectEnt_SensorTag.Model.csproj">
+      <Project>{290cdb70-cafa-4aaa-9bbd-e8080bce2f9f}</Project>
+      <Name>ProjectEnt_SensorTag.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjectEnt_SensorTag\ProjectEnt_SensorTag.csproj">
       <Project>{77f2679b-0d55-4adb-8686-fbd9975d8d65}</Project>
       <Name>ProjectEnt_SensorTag</Name>

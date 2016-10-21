@@ -60,7 +60,6 @@ namespace ProjectEnt_SensorTag.ViewModel
                     bool result = SendMessage.PostRequest<bool, User>("UNKNOWN", User);
                     if (result)
                     {
-
                         Messenger.Default.Send<User>(User);
                         nav.GoBack();
                     }
@@ -79,7 +78,7 @@ namespace ProjectEnt_SensorTag.ViewModel
 
         public string hashedPassword(String pass)
         {
-            if (pass == null) pass = "random";
+            if (pass == null) return "random";
             var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha1);
             byte[] inputBytes = Encoding.UTF8.GetBytes(pass);
             byte[] hash = hasher.HashData(inputBytes);
