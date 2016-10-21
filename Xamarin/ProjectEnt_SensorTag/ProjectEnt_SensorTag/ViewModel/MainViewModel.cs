@@ -108,8 +108,16 @@ namespace ProjectEnt_SensorTag.ViewModel
             {
                 if (Conntected)
                 {
-                    this.nav.NavigateTo("Regen");
-                    Messenger.Default.Send(User);
+                    try
+                    {
+                        this.nav.NavigateTo("Regen");
+                        Messenger.Default.Send(User);
+                    }
+                    catch
+                    {
+                        Messenger.Default.Send("Unknown error restart connection");
+                        SensorTag = null;
+                    }
                 }
                 else
                 {

@@ -76,7 +76,8 @@ namespace ProjectEnt_SensorTag.ViewModel
             }, () => sensorTag.HumiditySensor.Humidity.HumidityAmount != 0 && sensorTag.TemperatureSensor.Temperature.TemperatureAmount != 0);
             getTemp = new RelayCommand(() =>
             {
-                while(sensorTag.TemperatureSensor.Temperature.TemperatureAmount == 0)
+                double temp = sensorTag.TemperatureSensor.Temperature.TemperatureAmount;
+                while (temp < 0.0 && temp >= 100.0)
                 { 
                     SensorTag.TemperatureSensor.GetTemperature();
                 }

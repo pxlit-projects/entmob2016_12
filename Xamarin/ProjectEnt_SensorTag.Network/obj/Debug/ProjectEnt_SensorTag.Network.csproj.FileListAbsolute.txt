@@ -1,5 +1,3 @@
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.csproj.App.config
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.csprojResolveAssemblyReference.cache
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\ProjectEnt_SensorTag.Network.dll.config
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\ProjectEnt_SensorTag.Network.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\ProjectEnt_SensorTag.Network.pdb
@@ -16,11 +14,7 @@ C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Netwo
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\System.ComponentModel.Annotations.xml
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.csproj.App.config
+C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.csprojResolveAssemblyReference.cache
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.dll
 C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.pdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\ProjectEnt_SensorTag.Network.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\ProjectEnt_SensorTag.Network.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\obj\Debug\ProjectEnt_SensorTag.Network.dll.mdb
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Network\bin\Debug\ProjectEnt_SensorTag.Network.dll.mdb
