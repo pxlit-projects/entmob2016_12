@@ -20,8 +20,7 @@ namespace ProjectEnt_SensorTag.UWP
         public MainPage()
         {
             this.InitializeComponent();
-
-            LoadApplication(new ProjectEnt_SensorTag.App());
+            
         }
     }
 }

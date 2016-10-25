@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEnt_SensorTag.UWP.DataLayer
 {
-    public class SensorContext : DbContext
+    public class SensorContext
     {
     }
 }
