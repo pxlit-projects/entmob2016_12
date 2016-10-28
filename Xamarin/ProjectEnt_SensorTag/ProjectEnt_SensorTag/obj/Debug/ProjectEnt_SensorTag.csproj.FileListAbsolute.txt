@@ -127,3 +127,5 @@ C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\Projec
 C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.Views.Register.xaml.g.cs
 C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.dll
 C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.pdb
+C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\obj\Debug\ProjectEnt_SensorTag.dll.mdb
+C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\bin\Debug\ProjectEnt_SensorTag.dll.mdb

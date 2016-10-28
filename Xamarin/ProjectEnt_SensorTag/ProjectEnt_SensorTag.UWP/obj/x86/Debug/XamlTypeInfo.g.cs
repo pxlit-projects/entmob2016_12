@@ -156,17 +156,23 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
-            _typeNameTable[0] = "ProjectEnt_SensorTag.UWP.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "ProjectEnt_SensorTag.UWP.Menu";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "ProjectEnt_SensorTag.UWP.ViewModelLocator";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "ProjectEnt_SensorTag.UWP.Views.LoginView";
+            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[5] = "ProjectEnt_SensorTag.UWP.Views.MenuView";
+            _typeNameTable[6] = "ProjectEnt_SensorTag.UWP.Views.OverviewView";
 
-            _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::ProjectEnt_SensorTag.UWP.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::ProjectEnt_SensorTag.UWP.Menu);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::ProjectEnt_SensorTag.UWP.ViewModelLocator);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::ProjectEnt_SensorTag.UWP.Views.LoginView);
+            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[5] = typeof(global::ProjectEnt_SensorTag.UWP.Views.MenuView);
+            _typeTable[6] = typeof(global::ProjectEnt_SensorTag.UWP.Views.OverviewView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -201,8 +207,10 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::ProjectEnt_SensorTag.UWP.MainPage(); }
-        private object Activate_3_Menu() { return new global::ProjectEnt_SensorTag.UWP.Menu(); }
+        private object Activate_0_ViewModelLocator() { return new global::ProjectEnt_SensorTag.UWP.ViewModelLocator(); }
+        private object Activate_2_LoginView() { return new global::ProjectEnt_SensorTag.UWP.Views.LoginView(); }
+        private object Activate_5_MenuView() { return new global::ProjectEnt_SensorTag.UWP.Views.MenuView(); }
+        private object Activate_6_OverviewView() { return new global::ProjectEnt_SensorTag.UWP.Views.OverviewView(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -214,24 +222,42 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  ProjectEnt_SensorTag.UWP.MainPage
-                userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  ProjectEnt_SensorTag.UWP.ViewModelLocator
+                userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_ViewModelLocator;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Object
                 xamlType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  ProjectEnt_SensorTag.UWP.Menu
+            case 2:   //  ProjectEnt_SensorTag.UWP.Views.LoginView
                 userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_Menu;
+                userType.Activator = Activate_2_LoginView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 3:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  ProjectEnt_SensorTag.UWP.Views.MenuView
+                userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_MenuView;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  ProjectEnt_SensorTag.UWP.Views.OverviewView
+                userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_OverviewView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

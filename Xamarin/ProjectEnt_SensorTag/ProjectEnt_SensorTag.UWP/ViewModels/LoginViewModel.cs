@@ -36,11 +36,12 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
         {
             get
             {
-                return _doSomething ??
+                    return _doSomething ??
                     new RelayCommand(() =>
                     {
-                        _navigationService.Navigate(typeof(MainViewModel));
+                        _navigationService.Navigate(typeof(Views.MenuView));
                     });
+                //TODO User versturen via messenger
             }
 
 

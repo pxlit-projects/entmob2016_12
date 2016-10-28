@@ -21,3 +21,5 @@ C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Model\
 C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Model\obj\Debug\ProjectEnt_SensorTag.Model.csprojResolveAssemblyReference.cache
 C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Model\obj\Debug\ProjectEnt_SensorTag.Model.dll
 C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Model\obj\Debug\ProjectEnt_SensorTag.Model.pdb
+C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Model\obj\Debug\ProjectEnt_SensorTag.Model.dll.mdb
+C:\Users\Kaan\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Model\bin\Debug\ProjectEnt_SensorTag.Model.dll.mdb
