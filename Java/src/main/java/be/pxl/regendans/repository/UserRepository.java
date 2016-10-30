@@ -16,7 +16,9 @@ import java.util.List;
  */
 @Repository
 public interface UserRepository extends CrudRepository<User,Integer> {
-    User findUserById(int id);
-    List<User> findAll();
-    void deleteUserById(int id);
+    User findByUsername(String username);
+
+    User findById(int id);
+
+    User deleteUserById(int id);
 }

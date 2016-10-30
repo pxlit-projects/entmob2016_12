@@ -9,6 +9,8 @@ import be.pxl.regendans.repository.TemperatureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 /**
@@ -25,20 +27,29 @@ public class SensorDataServiceImpl implements SensorDataService {
     TemperatureRepository temperatureRepository;
 
     @Override
-    public Temperature saveTemperature(float degrees) {
+    public Temperature saveTemperature(double degrees,int userId) {
         Temperature temperature = new Temperature();
+        temperature.setTemperature(degrees);
+        temperature.setTimestamp(Timestamp.from(Instant.now()));
+        temperature.setUserid(userId);
         return temperatureRepository.save(temperature);
     }
 
     @Override
-    public Humidity saveHumidity(float moist) {
+    public Humidity saveHumidity(double moist,int userId) {
         Humidity humidity = new Humidity();
+        humidity.setHumidity(moist);
+        humidity.setTimestamp(Timestamp.from(Instant.now()));
+        humidity.setUserId(userId);
         return humidityRepository.save(humidity);
     }
 
     @Override
-    public AirPressure saveAirPressure(float pressure) {
+    public AirPressure saveAirPressure(double pressure,int userId) {
         AirPressure airPressure = new AirPressure();
+        airPressure.setPressure(pressure);
+        airPressure.setUserid(userId);
+        airPressure.setTimestamp(Timestamp.from(Instant.now()));
         return airPressureRepository.save(airPressure);
     }
 }

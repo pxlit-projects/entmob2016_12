@@ -1,7 +1,6 @@
 package be.pxl.regendans.service;
 
 import be.pxl.regendans.entity.User;
-import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
@@ -12,6 +11,6 @@ import java.util.List;
 public interface UserService{
     User findUserById(int id);
     List<User> findAll();
-    void deleteUserById(int id);
+    User deleteUserById(int id);
     User updateUser(User u);
 }

@@ -19,21 +19,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUserById(int id) {
-        return userRepository.findUserById(id);
+        return userRepository.findById(id);
     }
 
     @Override
     public List<User> findAll() {
-        return userRepository.findAll();
+        return (List<User>) userRepository.findAll();
     }
 
     @Override
-    public void deleteUserById(int id) {
-        userRepository.deleteUserById(id);
+    public User deleteUserById(int id) {
+        return userRepository.deleteUserById(id);
     }
 
     public User updateUser(User u) {
-        if(userRepository.findUserById(u.getId()) != null){
+        if(userRepository.findById(u.getId()) != null){
             return userRepository.save(u);
         }
 

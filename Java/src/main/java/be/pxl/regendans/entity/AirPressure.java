@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="airPressure")
+@Table(name="airpressure")
 public class AirPressure{
 
     @Id
@@ -18,13 +18,10 @@ public class AirPressure{
     private int id;
 
     @Column(name = "userid")
-    private int userId;
-
-    @Column(name = "locationid")
-    private int locationId;
+    private int userid;
 
     @Column(name = "pressure")
-    private float pressure;
+    private double pressure;
 
     @Column(name = "timestamp")
     private Timestamp timestamp;
@@ -32,8 +29,7 @@ public class AirPressure{
     @Override
     public String toString(){
         return "Airpressure{id=" + id +
-                ", userid=" + userId +
-                ", locationid=" + locationId +
+                ", userid=" + userid +
                 ", pressure=" + pressure +
                 ", timestamp=" + timestamp +
                 "}";
@@ -51,27 +47,19 @@ public class AirPressure{
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
-    public int getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
-    }
-
-    public float getPressure() {
+    public double getPressure() {
         return pressure;
     }
 
-    public void setPressure(float pressure) {
+    public void setPressure(double pressure) {
         this.pressure = pressure;
     }
 

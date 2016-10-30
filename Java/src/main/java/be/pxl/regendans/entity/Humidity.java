@@ -20,11 +20,8 @@ public class Humidity{
     @Column(name = "userid")
     private int userId;
 
-    @Column(name = "locationid")
-    private int locationId;
-
     @Column(name = "humidity")
-    private float humidity;
+    private double humidity;
 
     @Column(name = "timestamp")
     private Timestamp timestamp;
@@ -32,8 +29,7 @@ public class Humidity{
     @Override
     public String toString(){
         return "Humidity [id=" + id +
-                ", userid=" + userId +
-                ", locationid=" + locationId +
+                ", userId=" + userId +
                 ", humidity=" + humidity +
                 ", timestamp=" + timestamp +
                 "}";
@@ -59,19 +55,11 @@ public class Humidity{
         this.userId = userId;
     }
 
-    public int getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
-    }
-
-    public float getHumidity() {
+    public double getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(float humidity) {
+    public void setHumidity(double humidity) {
         this.humidity = humidity;
     }
 

@@ -18,13 +18,10 @@ public class Temperature{
     private int id;
 
     @Column(name = "userid")
-    private int userId;
-
-    @Column(name = "locationid")
-    private int locationId;
+    private int userid;
 
     @Column(name = "temperature")
-    private float temperature;
+    private double temperature;
 
     @Column(name = "timestamp")
     private Timestamp timestamp;
@@ -32,15 +29,14 @@ public class Temperature{
     @Override
     public String toString(){
         return "Temperature{id=" + id +
-                ", userid=" + userId +
-                ", locationid=" + locationId +
+                ", userid=" + userid +
                 ", temperature=" + temperature +
                 ", timestamp=" + timestamp +
                 "}";
     }
 
-    public boolean hot(){
-        return temperature > 22;
+    public boolean cold(){
+        return temperature < 20;
     }
 
     public int getId() {
@@ -51,27 +47,19 @@ public class Temperature{
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
-    public int getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
-    }
-
-    public float getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(float temperature) {
+    public void setTemperature(double temperature) {
         this.temperature = temperature;
     }
 

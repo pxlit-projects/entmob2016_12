@@ -1,5 +1,7 @@
 package be.pxl.regendans.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 /**
@@ -11,7 +13,7 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
@@ -28,6 +30,14 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 "}";
+    }
+
+    public User() {
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
     public int getId() {
