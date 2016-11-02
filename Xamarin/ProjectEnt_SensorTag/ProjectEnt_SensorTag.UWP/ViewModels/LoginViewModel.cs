@@ -1,4 +1,4 @@
-﻿using GalaSoft.MvvmLight.Command;
+﻿//using GalaSoft.MvvmLight.Command;
 using ProjectEnt_SensorTag.UWP.Navigation;
 using System;
 using System.Collections.Generic;
@@ -36,11 +36,14 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
         {
             get
             {
-                    return _doSomething ??
-                    new RelayCommand(() =>
-                    {
-                        _navigationService.Navigate(typeof(Views.MenuView));
-                    });
+                return _doSomething ??
+                new CustomCommand(s =>
+                {
+                    _navigationService.Navigate(typeof(Views.MenuView));
+                }
+                ,
+                 s => true);
+
                 //TODO User versturen via messenger
             }
 

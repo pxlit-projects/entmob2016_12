@@ -11,142 +11,65 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-
+            <VisualStateGroup x:Name="hoogte">
                 <VisualState>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="400"/>
+                        <AdaptiveTrigger MinWindowHeight="400" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="rainImage.Visibility" Value="Collapsed"/>
-
-                        <Setter Target="usersButton.FontSize" Value="30"/>
-                        <Setter Target="tempButton.FontSize" Value="30"/>
-                        <Setter Target="logoutButton.FontSize" Value="30"/>
-                        <Setter Target="tempButton.Margin" Value="0,50"/>
-                        <Setter Target="elementListbox.Background" Value="Yellow"/>
+                        <Setter Target="helloTextBlock.FontSize" Value="30"/>
+                        <Setter Target="keuzeTextBlock.FontSize" Value="20"/>
                     </VisualState.Setters>
-                </VisualState>
-                
-                
-                <VisualState>
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="67"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="usersButton.FontSize" Value="30"/>
-                        <Setter Target="tempButton.FontSize" Value="30"/>
-                        <Setter Target="logoutButton.FontSize" Value="30"/>
-                        <Setter Target="tempButton.Margin" Value="0,50"/>
-                        <Setter Target="elementListbox.Background" Value="Yellow"/>
-                    </VisualState.Setters>
-                </VisualState>
-
-                <VisualState>
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="22"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="usersButton.FontSize" Value="30*"/>
-                        <Setter Target="tempButton.FontSize" Value="20"/>
-                        <Setter Target="logoutButton.FontSize" Value="20"/>
-                        <Setter Target="tempButton.Margin" Value="0,5"/>
-                        <Setter Target="elementListbox.Background" Value="Orange"/>
-                    </VisualState.Setters>
-                </VisualState>
-
-                <VisualState>
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowHeight="10"/>
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Target="usersButton.FontSize" Value="20"/>
-                    <Setter Target="tempButton.FontSize" Value="20"/>
-                    <Setter Target="logoutButton.FontSize" Value="20"/>
-                    <Setter Target="tempButton.Margin" Value="0,5"/>
-                    <Setter Target="elementListbox.Background" Value="Blue"/>
-                </VisualState.Setters>
                 </VisualState>
             
             </VisualStateGroup>
             
-            <VisualStateGroup>
+            <VisualStateGroup x:Name="breedte">
                 <VisualState>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1150" />
+                        <AdaptiveTrigger MinWindowWidth="750" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="helloTextBlock.FontSize" Value="70"/>
-                        <Setter Target="usersButton.FontSize" Value="50"/>
-                        <Setter Target="tempButton.FontSize" Value="50"/>
-                        <Setter Target="logoutButton.FontSize" Value="50"/>
-                        <Setter Target="infoTextBlock.FontSize" Value="40"/>
+
+                        <Setter Target="infoTextBlock.FontSize" Value="50"/>
+                        <Setter Target="tempButton.Margin" Value="250,0"/>
+                        <Setter Target="helloTextBlock.FontSize" Value="40"/>
+                        <Setter Target="keuzeTextBlock.FontSize" Value="30"/>
                     </VisualState.Setters>
                 </VisualState>
-
-
+                
                 <VisualState>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="850" />
+                        <AdaptiveTrigger MinWindowWidth="300" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="helloTextBlock.FontSize" Value="50"/>
-                        <Setter Target="usersButton.FontSize" Value="50"/>
-                        <Setter Target="tempButton.FontSize" Value="50"/>
-                        <Setter Target="logoutButton.FontSize" Value="50"/>
                         <Setter Target="infoTextBlock.FontSize" Value="30"/>
+                        <Setter Target="tempButton.Margin" Value="100,0"/>
                     </VisualState.Setters>
                 </VisualState>
-
-                <VisualState>
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="600" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="helloTextBlock.FontSize" Value="40"/>
-                        <Setter Target="usersButton.FontSize" Value="30"/>
-                        <Setter Target="tempButton.FontSize" Value="30"/>
-                        <Setter Target="logoutButton.FontSize" Value="30"/>
-                        <Setter Target="infoTextBlock.FontSize" Value="20"/>
-                    </VisualState.Setters>
-                </VisualState>
-
-                <VisualState>
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="450" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="helloTextBlock.FontSize" Value="40"/>
-                        <Setter Target="usersButton.FontSize" Value="30"/>
-                        <Setter Target="tempButton.FontSize" Value="30"/>
-                        <Setter Target="logoutButton.FontSize" Value="30"/>
-                        <Setter Target="infoTextBlock.FontSize" Value="15"/>
-                    </VisualState.Setters>
-                </VisualState>
-
-
+                
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
 
 
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
         
-        <RelativePanel Grid.Column="0">
-            <Image Name="rainImage" Source="/../Assets/rain.jpg" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
-            <TextBlock Name="helloTextBlock" Text="Hello Admin" RelativePanel.Below="rainImage" />
-            <Button Name="usersButton" RelativePanel.Below="helloTextBlock">Users</Button>
-            <Button Name="tempButton" RelativePanel.Below="usersButton">Temperature</Button>
-            <Button Name="logoutButton" RelativePanel.Below="tempButton" >Logout</Button>
+        <RelativePanel Grid.Row="0" BorderBrush="Black">
+            <TextBlock Name="helloTextBlock" Text="Welkom Admin" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <TextBlock Name="keuzeTextBlock" Text="Wat wenst u te doen ?" RelativePanel.Below="helloTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <Button Name="usersButton" RelativePanel.LeftOf="tempButton" RelativePanel.AlignTopWith="tempButton">Users</Button>
+            <Button Name="tempButton"  RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="keuzeTextBlock" Margin="250,0" >Temperature</Button>
+            <Button Name="changePasswdButton" Command="{Binding ChangePassword}" RelativePanel.RightOf="tempButton" RelativePanel.AlignTopWith="tempButton">Change password</Button>
         </RelativePanel>
 
-        <RelativePanel Grid.Column="1">
+        <RelativePanel Grid.Row="1">
             <TextBlock Name="infoTextBlock" FontSize="40" Text="Hier vindt u de elementen terug:"/>
-            <ListBox Name="elementListbox" Background="Green" RelativePanel.Below="infoTextBlock" Margin="0,0,0,-66">
+            <ListBox Name="elementListbox" Background="Green" RelativePanel.Below="infoTextBlock" Margin="0,0,0,-149">
             </ListBox>
         </RelativePanel>
 

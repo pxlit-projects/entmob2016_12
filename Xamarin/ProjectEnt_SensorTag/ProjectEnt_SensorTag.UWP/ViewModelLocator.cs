@@ -21,7 +21,7 @@ namespace ProjectEnt_SensorTag.UWP
         }
 
 
-        private static MainViewModel mainViewModel = new MainViewModel();
+        private static MainViewModel mainViewModel = new MainViewModel(new NavigationService());
 
         public static MainViewModel MainViewModel
         {
