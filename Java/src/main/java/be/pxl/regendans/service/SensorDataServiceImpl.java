@@ -27,28 +27,19 @@ public class SensorDataServiceImpl implements SensorDataService {
     TemperatureRepository temperatureRepository;
 
     @Override
-    public Temperature saveTemperature(double degrees,int userId) {
-        Temperature temperature = new Temperature();
-        temperature.setTemperature(degrees);
+    public Temperature saveTemperature( Temperature temperature) {
         temperature.setTimestamp(Timestamp.from(Instant.now()));
-        temperature.setUserid(userId);
         return temperatureRepository.save(temperature);
     }
 
     @Override
-    public Humidity saveHumidity(double moist,int userId) {
-        Humidity humidity = new Humidity();
-        humidity.setHumidity(moist);
+    public Humidity saveHumidity(Humidity humidity) {
         humidity.setTimestamp(Timestamp.from(Instant.now()));
-        humidity.setUserId(userId);
         return humidityRepository.save(humidity);
     }
 
     @Override
-    public AirPressure saveAirPressure(double pressure,int userId) {
-        AirPressure airPressure = new AirPressure();
-        airPressure.setPressure(pressure);
-        airPressure.setUserid(userId);
+    public AirPressure saveAirPressure(AirPressure airPressure) {
         airPressure.setTimestamp(Timestamp.from(Instant.now()));
         return airPressureRepository.save(airPressure);
     }

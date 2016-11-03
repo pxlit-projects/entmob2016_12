@@ -3,6 +3,7 @@ package be.pxl.regendans.controller;
 import be.pxl.regendans.entity.AirPressure;
 import be.pxl.regendans.entity.Humidity;
 import be.pxl.regendans.entity.Temperature;
+import be.pxl.regendans.jms.JMSMessageLogger;
 import be.pxl.regendans.service.SensorDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -24,19 +25,21 @@ public class SensorDataController {
 
     @Autowired
     SensorDataService sensorDataService;
+    @Autowired
+    private JMSMessageLogger logger;
 
     public static final String SENSORDATA_BASE_URL = "/sensordata";
 
     @PostMapping(value = "/temperature", produces="application/json", headers="Accept=application/json")
-    public ResponseEntity saveTemeperature(@RequestBody Map<String, String> json) {
+    public ResponseEntity saveTemeperature(@RequestBody Temperature temperature) {
         final HttpHeaders httpHeaders= new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        logger.log("temperature is being saved");
 
         Temperature temp;
         try {
-            double temperature = Double.parseDouble(json.get("temperature"));
-            int userid = Integer.parseInt(json.get("userid"));
-            temp = sensorDataService.saveTemperature(temperature,userid);
+
+            temp = sensorDataService.saveTemperature(temperature);
         }catch(Exception e){
             return new ResponseEntity(httpHeaders, HttpStatus.NOT_FOUND);
         }
@@ -45,36 +48,33 @@ public class SensorDataController {
     }
 
     @PostMapping(value = "/humidity", produces="application/json", headers="Accept=application/json")
-    public ResponseEntity saveHumidity(@RequestBody Map<String, String> json) {
+    public ResponseEntity saveHumidity(@RequestBody Humidity humidity) {
         final HttpHeaders httpHeaders= new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
-
-        Humidity humidity;
+        logger.log("Humidity is being saved");
+        Humidity hum;
         try {
-            double temperature = Double.parseDouble(json.get("humidity"));
-            int userid = Integer.parseInt(json.get("userid"));
-            humidity = sensorDataService.saveHumidity(temperature,userid);
+            hum = sensorDataService.saveHumidity(humidity);
         }catch(Exception e){
             return new ResponseEntity(httpHeaders, HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<Humidity>(humidity, httpHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<Humidity>(hum, httpHeaders, HttpStatus.CREATED);
     }
 
     @PostMapping(value = "/airpressure", produces="application/json", headers="Accept=application/json")
-    public ResponseEntity saveAirPressure(@RequestBody Map<String, String> json) {
+    public ResponseEntity saveAirPressure(@RequestBody AirPressure airPressure) {
         final HttpHeaders httpHeaders= new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        logger.log("airpressure is being saved");
 
-        AirPressure airPressure;
+        AirPressure pressure;
         try {
-            double temperature = Double.parseDouble(json.get("airpressure"));
-            int userid = Integer.parseInt(json.get("userid"));
-            airPressure = sensorDataService.saveAirPressure(temperature,userid);
+            pressure = sensorDataService.saveAirPressure(airPressure);
         }catch(Exception e){
             return new ResponseEntity(httpHeaders, HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<>(airPressure, httpHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<>(pressure, httpHeaders, HttpStatus.CREATED);
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
  * Created by Frank on 28-10-2016.
  */
 public interface SensorDataService{
-    Temperature saveTemperature(double temperature,int userId);
-    Humidity saveHumidity(double humditiy,int userId);
-    AirPressure saveAirPressure(double airPressure,int userId);
+    Temperature saveTemperature(Temperature temperature);
+    Humidity saveHumidity(Humidity humidity);
+    AirPressure saveAirPressure(AirPressure airPressure);
 }
