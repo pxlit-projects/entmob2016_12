@@ -62,15 +62,27 @@
         <RelativePanel Grid.Row="0" BorderBrush="Black">
             <TextBlock Name="helloTextBlock" Text="Welkom Admin" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
             <TextBlock Name="keuzeTextBlock" Text="Wat wenst u te doen ?" RelativePanel.Below="helloTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True" />
-            <Button Name="usersButton" RelativePanel.LeftOf="tempButton" RelativePanel.AlignTopWith="tempButton">Users</Button>
-            <Button Name="tempButton"  RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="keuzeTextBlock" Margin="250,0" >Temperature</Button>
+            <Button Name="tempButton"  RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="keuzeTextBlock" Margin="250,0" Command="{Binding Temp}">Temperature</Button>
             <Button Name="changePasswdButton" Command="{Binding ChangePassword}" RelativePanel.RightOf="tempButton" RelativePanel.AlignTopWith="tempButton">Change password</Button>
         </RelativePanel>
 
         <RelativePanel Grid.Row="1">
             <TextBlock Name="infoTextBlock" FontSize="40" Text="Hier vindt u de elementen terug:"/>
-            <ListBox Name="elementListbox" Background="Green" RelativePanel.Below="infoTextBlock" Margin="0,0,0,-149">
-            </ListBox>
+
+            <ListView Name="EpisodeList" ItemsSource="{Binding TemperatureList}" RelativePanel.Below="infoTextBlock">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>
+                                   <Run Text="Temperatuur " />
+                                   <Run Text="{Binding TemperatureAmount}" Foreground="Blue"/>
+                                   <Run Text=" - User : " />
+                                   <Run Text="{Binding User.Username}" />
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </RelativePanel>
 
     </Grid>

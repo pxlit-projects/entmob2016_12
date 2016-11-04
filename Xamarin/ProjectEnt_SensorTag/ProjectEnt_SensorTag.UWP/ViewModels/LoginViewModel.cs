@@ -43,11 +43,7 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
                 }
                 ,
                  s => true);
-
-                //TODO User versturen via messenger
             }
-
-
         }
     }
 }

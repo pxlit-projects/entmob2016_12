@@ -1,4 +1,6 @@
-﻿using ProjectEnt_SensorTag.UWP.Navigation;
+﻿using ProjectEnt_SensorTag.Model;
+using ProjectEnt_SensorTag.UWP.Navigation;
+using ProjectEnt_SensorTag.UWP.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +26,19 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
             }
         }
 
+        private List<Temperature> temperatureList = new List<Temperature>();
+
+        public List<Temperature> TemperatureList
+        {
+            get { return temperatureList; }
+            set
+            {
+                temperatureList = value;
+                OnPropertyChanged("TemperatureList");
+            }
+        }
+
+
         public MainViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
@@ -38,14 +53,35 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
                 return _changePassword ??
                 new CustomCommand(s =>
                 {
-                    _navigationService.Navigate(typeof(Views.OverviewView));
+                    _navigationService.Navigate(typeof(OverviewView));
                 }
                 ,
                  s => true);
-                //user doorsturen
             }
+        }
 
+        private ICommand _temp;
 
+        public ICommand Temp
+        {
+            get
+            {
+                return _temp ??
+                new CustomCommand(s =>
+                {
+                    List<Temperature> temps = new List<Temperature>();
+                    Temperature temp = new Temperature();
+                    User user = new User();
+                    user.Id = 1;
+                    user.Username = "ExampleUser";
+                    temp.User = user;
+                    temp.TemperatureAmount = 25.00;
+                    temps.Add(temp);
+                    TemperatureList = temps;
+                }
+                ,
+                 s => true);
+            }
         }
     }
 }
