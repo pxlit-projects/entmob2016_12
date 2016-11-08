@@ -1,4 +1,4 @@
-﻿//using GalaSoft.MvvmLight.Command;
+﻿
 using ProjectEnt_SensorTag.UWP.Navigation;
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using ProjectEnt_SensorTag.UWP.Views;
 
 namespace ProjectEnt_SensorTag.UWP.ViewModels
 {
@@ -30,16 +31,16 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
             _navigationService = navigationService;
         }
 
-        private ICommand _doSomething;
+        private ICommand login;
 
-        public ICommand DoSomething
+        public ICommand Login
         {
             get
             {
-                return _doSomething ??
+                return login ??
                 new CustomCommand(s =>
                 {
-                    _navigationService.Navigate(typeof(Views.MenuView));
+                    _navigationService.Navigate(typeof(MenuView));
                 }
                 ,
                  s => true);

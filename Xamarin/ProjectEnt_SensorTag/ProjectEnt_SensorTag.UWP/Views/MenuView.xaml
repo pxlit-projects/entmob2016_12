@@ -14,11 +14,11 @@
             <VisualStateGroup x:Name="hoogte">
                 <VisualState>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="400" />
+                        <AdaptiveTrigger MinWindowHeight="100" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="helloTextBlock.FontSize" Value="30"/>
-                        <Setter Target="keuzeTextBlock.FontSize" Value="20"/>
+                        <Setter Target="helloTextBlock.FontSize" Value="60"/>
+                        <Setter Target="keuzeTextBlock.FontSize" Value="50"/>
                     </VisualState.Setters>
                 </VisualState>
             
@@ -30,11 +30,11 @@
                         <AdaptiveTrigger MinWindowWidth="750" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-
                         <Setter Target="infoTextBlock.FontSize" Value="50"/>
-                        <Setter Target="tempButton.Margin" Value="250,0"/>
                         <Setter Target="helloTextBlock.FontSize" Value="40"/>
                         <Setter Target="keuzeTextBlock.FontSize" Value="30"/>
+                        <Setter Target="tempButton.FontSize" Value="30"/>
+                        <Setter Target="changePasswdButton.FontSize" Value="30"/>
                     </VisualState.Setters>
                 </VisualState>
                 
@@ -44,7 +44,10 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="infoTextBlock.FontSize" Value="30"/>
-                        <Setter Target="tempButton.Margin" Value="100,0"/>
+                        <Setter Target="helloTextBlock.FontSize" Value="25"/>
+                        <Setter Target="keuzeTextBlock.FontSize" Value="15"/>
+                        <Setter Target="tempButton.FontSize" Value="15"/>
+                        <Setter Target="changePasswdButton.FontSize" Value="15"/>
                     </VisualState.Setters>
                 </VisualState>
                 
@@ -62,8 +65,9 @@
         <RelativePanel Grid.Row="0" BorderBrush="Black">
             <TextBlock Name="helloTextBlock" Text="Welkom Admin" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
             <TextBlock Name="keuzeTextBlock" Text="Wat wenst u te doen ?" RelativePanel.Below="helloTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True" />
-            <Button Name="tempButton"  RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="keuzeTextBlock" Margin="250,0" Command="{Binding Temp}">Temperature</Button>
-            <Button Name="changePasswdButton" Command="{Binding ChangePassword}" RelativePanel.RightOf="tempButton" RelativePanel.AlignTopWith="tempButton">Change password</Button>
+            <Grid Name="layoutGrid" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <Button Name="tempButton" RelativePanel.LeftOf="layoutGrid" Margin="0,0,20,0"  RelativePanel.Below="keuzeTextBlock"  Command="{Binding Temp}">Temperature</Button>
+            <Button Name="changePasswdButton" Margin="20,0,0,0"  Command="{Binding ChangePassword}" RelativePanel.RightOf="layoutGrid" RelativePanel.AlignTopWith="tempButton">Change password</Button>
         </RelativePanel>
 
         <RelativePanel Grid.Row="1">

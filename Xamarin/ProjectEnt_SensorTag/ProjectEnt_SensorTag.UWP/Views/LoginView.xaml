@@ -86,7 +86,7 @@
 
 
 
-                <Button x:Name="loginButton" RelativePanel.Below="wachtwoordPasswordBox" Width="500" Command="{Binding DoSomething}">Login</Button>
+                <Button x:Name="loginButton" RelativePanel.Below="wachtwoordPasswordBox" Width="500" Command="{Binding Login}">Login</Button>
             </RelativePanel>
 
         </StackPanel>
