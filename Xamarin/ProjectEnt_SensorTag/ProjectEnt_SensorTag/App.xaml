@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectEnt_SensorTag.App" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+<Application 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ProjectEnt_SensorTag.App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    d1p1:Ignorable="d" 
+    xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:l="clr-namespace:ProjectEnt_SensorTag.Converters">
   <Application.Resources>
     <ResourceDictionary>
       <Color x:Key="menu">#191919</Color>
       <Color x:Key="title">#191919</Color>
       <Color x:Key="text">#0c0c0c</Color>
+      <l:FahrenheitConverter x:Key="FahrenheitConverter"/>
+      <l:KelvinConverter x:Key="KelvinConverter"/>
     </ResourceDictionary>
   </Application.Resources>
 </Application>

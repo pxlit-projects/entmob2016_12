@@ -5,7 +5,6 @@ namespace ProjectEnt_SensorTag.Model
 {
     public class AirPressure
     { 
-    [Key]
     public int Id { get; set; }
     public User User { get; set; }
     public int UserId { get; set; }

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectEnt_SensorTag.Views.Login" >
+             x:Class="ProjectEnt_SensorTag.Views.Login"
+             Title="Login" >
     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="0,5">
         <Label Text="Meld u aan" TextColor="Black" HorizontalTextAlignment="Center" FontSize="16"/>
         <Entry Placeholder="Login" Text="{Binding User.Username, Mode=TwoWay}"/>

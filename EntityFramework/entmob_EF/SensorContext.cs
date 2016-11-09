@@ -1,12 +1,6 @@
 ﻿using ProjectEnt_SensorTag.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure.Annotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace entmob_EF
 {
@@ -25,8 +19,11 @@ namespace entmob_EF
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<User>().HasKey(s => s.Id);
-            modelBuilder.Entity<Temperature>().HasMany(s => s.Location).WithOptional().HasForeignKey(h => h.Id);
-            modelBuilder.Entity<User>().ToTable("UserData");
+            modelBuilder.Entity<User>().Property(t => t.Username).IsRequired().HasMaxLength(60);
+            modelBuilder.Entity<User>().Property(t => t.Password).IsRequired().HasMaxLength(60);
+            modelBuilder.Entity<Temperature>().HasOptional(s => s.Location).WithRequired();
+            modelBuilder.Entity<User>().ToTable("Users");
+            modelBuilder.Entity<Temperature>().HasRequired(t => t.User).WithMany();
         }
     }
 }

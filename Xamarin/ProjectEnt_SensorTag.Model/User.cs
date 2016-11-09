@@ -10,7 +10,6 @@ namespace ProjectEnt_SensorTag.Model
 {
     public class User
     {
-        [Key]
         [JsonProperty("Id")]
         public int Id { get; set; }
         [JsonProperty("Username")]

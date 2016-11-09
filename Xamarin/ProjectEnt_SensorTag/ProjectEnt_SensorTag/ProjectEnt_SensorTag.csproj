@@ -38,6 +38,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\FahrenheitConverter.cs" />
+    <Compile Include="Converters\KelvinConverter.cs" />
     <Compile Include="Navigation\Navigation.cs" />
     <Compile Include="Network\SendMessage.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -166,9 +168,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\ProjectEnt_SensorTag.Model\ProjectEnt_SensorTag.Model.csproj">
       <Project>{290cdb70-cafa-4aaa-9bbd-e8080bce2f9f}</Project>
