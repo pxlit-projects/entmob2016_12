@@ -1,3 +1,0 @@
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag.Model\ProjectEnt_SensorTag.Model.csproj;neutral
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag.WinPhone\ProjectEnt_SensorTag.WinPhone.csproj;neutral
-C:\Users\Frank\Documents\GitHub\entmob2016_12\Xamarin\ProjectEnt_SensorTag\ProjectEnt_SensorTag\ProjectEnt_SensorTag.csproj;neutral

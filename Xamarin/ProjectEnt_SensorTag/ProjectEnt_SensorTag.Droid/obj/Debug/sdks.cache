@@ -2,11 +2,19 @@
 <Sdk>
   <AndroidApiLevel>23</AndroidApiLevel>
   <AndroidApiLevelName>23</AndroidApiLevelName>
+<<<<<<< HEAD
   <AndroidNdkPath>C:\Users\Kaan\Documents\Android\ndk\android-ndk-r10e</AndroidNdkPath>
   <AndroidSdkBuildToolsPath>C:\Users\Kaan\AppData\Local\Android\android-sdk\build-tools\23.0.1</AndroidSdkBuildToolsPath>
   <AndroidSdkBuildToolsBinPath>C:\Users\Kaan\AppData\Local\Android\android-sdk\build-tools\23.0.1</AndroidSdkBuildToolsBinPath>
   <AndroidSdkPath>C:\Users\Kaan\AppData\Local\Android\android-sdk</AndroidSdkPath>
   <JavaSdkPath>C:\Program Files (x86)\Java\jdk1.7.0_71</JavaSdkPath>
+=======
+  <AndroidNdkPath>C:\ProgramData\Microsoft\AndroidNDK\android-ndk-r10e\</AndroidNdkPath>
+  <AndroidSdkBuildToolsPath>C:\Program Files (x86)\Android\android-sdk\build-tools\23.0.1</AndroidSdkBuildToolsPath>
+  <AndroidSdkBuildToolsBinPath>C:\Program Files (x86)\Android\android-sdk\build-tools\23.0.1</AndroidSdkBuildToolsBinPath>
+  <AndroidSdkPath>C:\Program Files (x86)\Android\android-sdk</AndroidSdkPath>
+  <JavaSdkPath>C:\Program Files\Java\jdk1.8.0_101</JavaSdkPath>
+>>>>>>> master
   <MonoAndroidBinPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidBinPath>
   <MonoAndroidToolsPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidToolsPath>
   <ReferenceAssemblyPaths>

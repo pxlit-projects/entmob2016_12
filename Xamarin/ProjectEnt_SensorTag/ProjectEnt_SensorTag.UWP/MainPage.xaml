@@ -10,6 +10,7 @@
     DataContext="{Binding Source={StaticResource MainViewModelLocator}, Path=LoginViewModel}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+<<<<<<< HEAD
         
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -92,6 +93,9 @@
             </StackPanel>
 
         </RelativePanel>
+=======
+        <Image Source="Assets/rain.jpg " />
+>>>>>>> master
     </Grid>
 
 

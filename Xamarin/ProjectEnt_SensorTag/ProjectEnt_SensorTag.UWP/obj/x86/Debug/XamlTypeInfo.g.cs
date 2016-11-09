@@ -156,6 +156,7 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
+<<<<<<< HEAD
             _typeNameTable = new string[7];
             _typeNameTable[0] = "ProjectEnt_SensorTag.UWP.ViewModelLocator";
             _typeNameTable[1] = "Object";
@@ -173,6 +174,17 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
             _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[5] = typeof(global::ProjectEnt_SensorTag.UWP.Views.MenuView);
             _typeTable[6] = typeof(global::ProjectEnt_SensorTag.UWP.Views.OverviewView);
+=======
+            _typeNameTable = new string[3];
+            _typeNameTable[0] = "ProjectEnt_SensorTag.UWP.MainPage";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+
+            _typeTable = new global::System.Type[3];
+            _typeTable[0] = typeof(global::ProjectEnt_SensorTag.UWP.MainPage);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+>>>>>>> master
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -207,10 +219,14 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
             return -1;
         }
 
+<<<<<<< HEAD
         private object Activate_0_ViewModelLocator() { return new global::ProjectEnt_SensorTag.UWP.ViewModelLocator(); }
         private object Activate_2_LoginView() { return new global::ProjectEnt_SensorTag.UWP.Views.LoginView(); }
         private object Activate_5_MenuView() { return new global::ProjectEnt_SensorTag.UWP.Views.MenuView(); }
         private object Activate_6_OverviewView() { return new global::ProjectEnt_SensorTag.UWP.Views.OverviewView(); }
+=======
+        private object Activate_0_MainPage() { return new global::ProjectEnt_SensorTag.UWP.MainPage(); }
+>>>>>>> master
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -222,6 +238,7 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
             switch (typeIndex)
             {
 
+<<<<<<< HEAD
             case 0:   //  ProjectEnt_SensorTag.UWP.ViewModelLocator
                 userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_ViewModelLocator;
@@ -236,10 +253,16 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
             case 2:   //  ProjectEnt_SensorTag.UWP.Views.LoginView
                 userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_2_LoginView;
+=======
+            case 0:   //  ProjectEnt_SensorTag.UWP.MainPage
+                userType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_MainPage;
+>>>>>>> master
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
+<<<<<<< HEAD
             case 3:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
@@ -261,6 +284,15 @@ namespace ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
+=======
+            case 1:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::ProjectEnt_SensorTag.UWP.ProjectEnt_SensorTag_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+>>>>>>> master
             }
             return xamlType;
         }

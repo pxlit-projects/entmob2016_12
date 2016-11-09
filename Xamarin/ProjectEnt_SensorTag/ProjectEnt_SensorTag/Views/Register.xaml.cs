@@ -14,7 +14,7 @@ namespace ProjectEnt_SensorTag.Views
         public Register()
         {
             InitializeComponent();
-            BindingContext = App.Locator.RegenViewModel;
+            BindingContext = App.Locator.RegisterViewModel;
             Messenger.Default.Register<string>(this, ShowWindow);
         }
 
