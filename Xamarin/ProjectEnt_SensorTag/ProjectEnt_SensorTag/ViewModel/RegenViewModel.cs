@@ -72,7 +72,7 @@ namespace ProjectEnt_SensorTag.ViewModel
             getInfo = new RelayCommand(() => 
             {
                  SendMessage.PostRequest<object, Humidity>("Somewhere",sensorTag.HumiditySensor.Humidity);
-                 SendMessage.PostRequest<object, List>("Somewhere", sensorTag.TemperatureSensor.Temperature);
+                 SendMessage.PostRequest<object, Temperature>("Somewhere", sensorTag.TemperatureSensor.Temperature);
             }, () => sensorTag.HumiditySensor.Humidity.HumidityAmount != 0 && sensorTag.TemperatureSensor.Temperature.TemperatureAmount != 0);
             getTemp = new RelayCommand(() =>
             {

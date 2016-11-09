@@ -20,11 +20,7 @@ namespace ProjectEnt_SensorTag.UWP
         public MainPage()
         {
             this.InitializeComponent();
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> master
         }
     }
 }
