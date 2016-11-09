@@ -21,7 +21,6 @@ namespace ProjectEnt_SensorTag.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new ProjectEnt_SensorTag.App());
         }
     }
 }

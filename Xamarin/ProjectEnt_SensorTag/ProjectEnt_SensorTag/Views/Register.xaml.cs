@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,19 @@ namespace ProjectEnt_SensorTag.Views
         public Register()
         {
             InitializeComponent();
+            BindingContext = App.Locator.RegisterViewModel;
+            Messenger.Default.Register<string>(this, ShowWindow);
         }
-        private void Register_Click(object sender, EventArgs e)
+
+        private void ShowWindow(string message)
         {
-            DisplayAlert("Alert", "Account created", "OK");
+            DisplayAlert("Alert", message, "Ok");
+        }
+
+        protected override void OnDisappearing()
+        {
+            Messenger.Default.Unregister<string>(this);
+            base.OnDisappearing();
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectEnt_SensorTag.Views.Regen">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="De temperature is: " />
+                <Label Text="{Binding SensorTag.TemperatureSensor.Temperature.TemperatureAmount}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="De Humidity is: " />
+                <Label Text="{Binding SensorTag.HumiditySensor.Humidity.HumidityAmount}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Button Command="{Binding GetTemp}" Text="Haal Temperature" />
+                <Button Command="{Binding GetHumidity}" Text="Haal Humidity" />
+            </StackLayout>
+            <Button x:Name="getInfoButton" Command="{Binding GetInfo,Mode=TwoWay}" Text="Verstuur naar de server" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
