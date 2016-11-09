@@ -7,6 +7,10 @@
             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                 <Label Text="De temperature is: " />
                 <Label Text="{Binding SensorTag.TemperatureSensor.Temperature.TemperatureAmount}" />
+                <Label Text="Fahrenheit " />
+                <Label Text="{Binding SensorTag.TemperatureSensor.Temperature.TemperatureAmount, Converter={StaticResource FahrenheitConverter}}" />
+                <Label Text="Kelvin " />
+                <Label Text="{Binding SensorTag.TemperatureSensor.Temperature.TemperatureAmount, Converter={StaticResource KelvinConverter}}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                 <Label Text="De Humidity is: " />

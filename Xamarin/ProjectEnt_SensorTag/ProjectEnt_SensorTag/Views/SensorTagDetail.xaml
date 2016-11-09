@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectEnt_SensorTag.Views.SensorTagDetail">
+             x:Class="ProjectEnt_SensorTag.Views.SensorTagDetail"
+             Title="Detail SensorTag">
     <ContentPage.Content>
         <StackLayout>
             <Image Source="sensorTag.jpg" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="5" />

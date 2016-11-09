@@ -1,10 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEnt_SensorTag.Model
 {
@@ -25,7 +21,6 @@ namespace ProjectEnt_SensorTag.Model
                 Set(ref humidityAmount, value);
             }
         }
-        [Timestamp]
         public Byte[] Timestamp { get; set; }
     }
 }

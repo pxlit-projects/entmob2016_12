@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Source="rain.jpg" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
         <StackLayout Grid.Row="1" Orientation="Vertical" >
-            <Label Text="Dit Applicatie is gemaakt om de regen te voorspellen doormiddel van de SensorTag. Op basis van de luchtdruk en vochtgehalte wordt er gekeken of er kans is op neerslag." FontSize="13" FontFamily="Arial" HorizontalTextAlignment="Start" TextColor="{StaticResource text}"/>
+            <Label Text="Deze Applicatie is gemaakt om de regen te voorspellen doormiddel van de SensorTag. Op basis van de luchtdruk en vochtgehalte wordt er gekeken of er kans is op neerslag." FontSize="13" FontFamily="Arial" HorizontalTextAlignment="Start" TextColor="{StaticResource text}"/>
             <Button x:name="LoginButton" Text="Inloggen" Command="{Binding Login}" />
             <Button x:name="RegisterButton" Text="Register" Command="{Binding Register}" />
         </StackLayout>
