@@ -5,4 +5,10 @@
     xmlns:local="using:ProjectEnt_SensorTag.UWP"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <local:ViewModelLocator x:Key="MainViewModelLocator"/>
+            
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

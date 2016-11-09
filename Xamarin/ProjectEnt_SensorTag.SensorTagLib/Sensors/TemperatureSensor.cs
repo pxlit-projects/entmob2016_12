@@ -15,8 +15,8 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Sensors
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private Temperature temperature = new Temperature();
-        public Temperature Temperature
+        private List temperature = new List();
+        public List Temperature
         {
             get { return temperature; }
             set

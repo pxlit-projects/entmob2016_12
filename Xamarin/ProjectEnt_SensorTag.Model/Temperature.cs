@@ -13,6 +13,7 @@ namespace ProjectEnt_SensorTag.Model
     {
         public int Id { get; set; }
         public int UserId { get; set; }
+        public User User { get; set; }
         public List<int> LocationId { get; set; }
         public List<UserLocation> Location { get; set; }
         private double temperatureAmount;
