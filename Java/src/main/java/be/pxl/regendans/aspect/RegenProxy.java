@@ -31,4 +31,8 @@ public class RegenProxy {
         System.out.println("access to " + joinPoint.getSignature()  +" with arguments");
         System.out.println(Arrays.toString(joinPoint.getArgs()));
     }
+
+    @Pointcut("bean(UserServiceImpl)")
+    public void userMethodsAccessed(){}
+
 }

@@ -24,7 +24,7 @@ public class JMSMessageLogger {
     public void log(String message){
         jmsTemplate.send(
                 destination,
-                (session) -> session.createMessage(message)
+                (session) -> session.createTextMessage(message)
         );
     }
 }
