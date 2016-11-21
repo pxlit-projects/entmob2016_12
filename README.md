@@ -2,6 +2,8 @@ Enterprise & Mobile Project
 =======================
 > Dit is de ReadMe waar je allerlei informatie kan vinden rond ons project.
 
+De uiteindelijke mappen voor de projecten van Xamarin en Java zijn de mappen met deze namen.
+
 ----------
 Leden entmob2016_12
 --------
