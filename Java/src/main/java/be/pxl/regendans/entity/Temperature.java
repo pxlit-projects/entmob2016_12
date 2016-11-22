@@ -26,6 +26,15 @@ public class Temperature{
     @Column(name = "timestamp")
     private Timestamp timestamp;
 
+    public Temperature() {
+    }
+
+    public Temperature(int userid, double temperature, Timestamp timestamp) {
+        this.userid = userid;
+        this.temperature = temperature;
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString(){
         return "Temperature{id=" + id +

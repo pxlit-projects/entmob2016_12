@@ -37,29 +37,16 @@ public class RainTest {
 
     @Autowired
     SensorTagService sensorTagService;
-    @Autowired
-    public TemperatureRepository temperatureRepository;
-    @Autowired
-    public HumidityRepository humidityRepository;
-    @Autowired
-    public AirPressureRepository airPressureRepository;
 
     @Test
     public void doesItRainTest() throws Exception {
-        Humidity humidity = mock(Humidity.class);
-        Temperature temperature = mock(Temperature.class);
-        AirPressure airPressure = mock(AirPressure.class);
-        humidityRepository = mock(HumidityRepository.class);
-        temperatureRepository = mock(TemperatureRepository.class);
-        airPressureRepository = mock(AirPressureRepository.class);
+        HumidityRepository humidityRepository = mock(HumidityRepository.class);
+        TemperatureRepository temperatureRepository = mock(TemperatureRepository.class);
+        AirPressureRepository airPressureRepository = mock(AirPressureRepository.class);
 
-        when(humidity.getHumidity()).thenReturn(25.0);
-        when(temperature.getTemperature()).thenReturn(25.0);
-        when(airPressure.getPressure()).thenReturn(25.0);
-
-        when(humidityRepository.findHumidityByUserid(1)).thenReturn(Arrays.asList(humidity));
-        when(temperatureRepository.findTemperatureByUserid(1)).thenReturn(Arrays.asList(temperature));
-        when(airPressureRepository.findAirpressureByUserid(1)).thenReturn(Arrays.asList(airPressure));
+        when(humidityRepository.findHumidityByUserid(1)).thenReturn(Arrays.asList(new Humidity(1,25.0,Timestamp.from(Instant.now()))));
+        when(temperatureRepository.findTemperatureByUserid(1)).thenReturn(Arrays.asList(new Temperature(1,25.0,Timestamp.from(Instant.now()))));
+        when(airPressureRepository.findAirpressureByUserid(1)).thenReturn(Arrays.asList(new AirPressure(1,25.0,Timestamp.from(Instant.now()))));
 
         assertThat(sensorTagService.doesItRain(1)).isFalse();
     }

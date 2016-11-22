@@ -17,6 +17,15 @@ public class AirPressure{
     @Column(name = "id")
     private int id;
 
+    public AirPressure() {
+    }
+
+    public AirPressure(int userid, double pressure, Timestamp timestamp) {
+        this.userid = userid;
+        this.pressure = pressure;
+        this.timestamp = timestamp;
+    }
+
     @Column(name = "userid")
     private int userid;
 
