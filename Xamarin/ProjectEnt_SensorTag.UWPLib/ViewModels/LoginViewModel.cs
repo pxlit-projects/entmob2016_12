@@ -1,6 +1,5 @@
 ﻿
 using ProjectEnt_SensorTag.UWP.Navigation;
-using ProjectEnt_SensorTag.UWP.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-<<<<<<< HEAD:Xamarin/ProjectEnt_SensorTag/ProjectEnt_SensorTag.UWP/ViewModels/LoginViewModel.cs
 using ProjectEnt_SensorTag.UWP.Views;
 using ProjectEnt_SensorTag.Model;
 using ProjectEnt_SensorTag.UWP.Messaging;
 using Windows.UI.Popups;
-=======
->>>>>>> 72012d3a94e5dd75774d49efbe5af01ac2619a38:Xamarin/ProjectEnt_SensorTag.UWPLib/ViewModels/LoginViewModel.cs
 
 namespace ProjectEnt_SensorTag.UWP.ViewModels
 {
-    public class LoginViewModel : INotifyPropertyChanged
+    class LoginViewModel : INotifyPropertyChanged
     {
         private INavigationService _navigationService;
 

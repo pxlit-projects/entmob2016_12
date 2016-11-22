@@ -17,14 +17,16 @@
                         <AdaptiveTrigger MinWindowWidth="1050" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="errorTextBlock.FontSize" Value="50"/>
+                        <Setter Target="backButton.FontSize" Value="50"/>
                         <Setter Target="titleTextBlock.FontSize" Value="70"/>
                         <Setter Target="newPasswordTextBlock.FontSize" Value="50"/>
                         <Setter Target="confirmPasswordTextBlock.FontSize" Value="50"/>
-                        <Setter Target="confirmTextbox.FontSize" Value="50"/>
-                        <Setter Target="passwordTextbox.FontSize" Value="50"/>
+                        <Setter Target="confirmPasswordBox.FontSize" Value="50"/>
+                        <Setter Target="newPasswordBox.FontSize" Value="50"/>
                         <Setter Target="changeButton.FontSize" Value="50"/>
-                        <Setter Target="confirmTextbox.Width" Value="500"/>
-                        <Setter Target="passwordTextbox.Width" Value="500"/>
+                        <Setter Target="confirmPasswordBox.Width" Value="500"/>
+                        <Setter Target="newPasswordBox.Width" Value="500"/>
                     </VisualState.Setters>
                 </VisualState>
 
@@ -33,14 +35,16 @@
                         <AdaptiveTrigger MinWindowWidth="800" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="errorTextBlock.FontSize" Value="40"/>
+                        <Setter Target="backButton.FontSize" Value="40"/>
                         <Setter Target="titleTextBlock.FontSize" Value="60"/>
                         <Setter Target="newPasswordTextBlock.FontSize" Value="40"/>
                         <Setter Target="confirmPasswordTextBlock.FontSize" Value="40"/>
-                        <Setter Target="confirmTextbox.FontSize" Value="40"/>
-                        <Setter Target="passwordTextbox.FontSize" Value="40"/>
+                        <Setter Target="confirmPasswordBox.FontSize" Value="40"/>
+                        <Setter Target="newPasswordBox.FontSize" Value="40"/>
                         <Setter Target="changeButton.FontSize" Value="40"/>
-                        <Setter Target="confirmTextbox.Width" Value="300"/>
-                        <Setter Target="passwordTextbox.Width" Value="300"/>
+                        <Setter Target="confirmPasswordBox.Width" Value="300"/>
+                        <Setter Target="newPasswordBox.Width" Value="300"/>
                     </VisualState.Setters>
                 </VisualState>
 
@@ -49,14 +53,16 @@
                         <AdaptiveTrigger MinWindowWidth="100" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="errorTextBlock.FontSize" Value="30"/>
+                        <Setter Target="backButton.FontSize" Value="20"/>
                         <Setter Target="titleTextBlock.FontSize" Value="40"/>
                         <Setter Target="newPasswordTextBlock.FontSize" Value="20"/>
                         <Setter Target="confirmPasswordTextBlock.FontSize" Value="20"/>
-                        <Setter Target="confirmTextbox.FontSize" Value="20"/>
-                        <Setter Target="passwordTextbox.FontSize" Value="20"/>
+                        <Setter Target="confirmPasswordBox.FontSize" Value="20"/>
+                        <Setter Target="newPasswordBox.FontSize" Value="20"/>
                         <Setter Target="changeButton.FontSize" Value="20"/>
-                        <Setter Target="confirmTextbox.Width" Value="100"/>
-                        <Setter Target="passwordTextbox.Width" Value="100"/>
+                        <Setter Target="confirmPasswordBox.Width" Value="200"/>
+                        <Setter Target="newPasswordBox.Width" Value="200"/>
                     </VisualState.Setters>
                 </VisualState>
                 
@@ -67,11 +73,14 @@
         <RelativePanel>
             <Grid x:Name="CenterGrid" RelativePanel.AlignHorizontalCenterWithPanel="True" />
             <TextBlock Name="titleTextBlock" Text="Change Password" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <Button Name="backButton" FontSize="40" Command="{Binding GoBack}" RelativePanel.AlignVerticalCenterWith="titleTextBlock">Terug</Button>
             <TextBlock Name="newPasswordTextBlock"  RelativePanel.LeftOf="CenterGrid" Text="New password:" RelativePanel.Below="titleTextBlock"/>
             <TextBlock Name="confirmPasswordTextBlock" Margin="0,50"  RelativePanel.LeftOf="CenterGrid" Text="Confirm new password:" RelativePanel.Below="newPasswordTextBlock"/>
-            <TextBox Name="passwordTextbox" Width="500" RelativePanel.RightOf="CenterGrid" RelativePanel.AlignVerticalCenterWith="newPasswordTextBlock" RelativePanel.AlignLeftWith="confirmTextbox"/>
-            <TextBox Name="confirmTextbox" Width="500" RelativePanel.RightOf="confirmPasswordTextBlock" RelativePanel.AlignVerticalCenterWith="confirmPasswordTextBlock"/>
-            <Button Name="changeButton" RelativePanel.Below="confirmPasswordTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True">Change password</Button>
+            <PasswordBox Name="newPasswordBox" Password="{Binding NewPassword, Mode=TwoWay}" Width="500" RelativePanel.RightOf="CenterGrid" RelativePanel.AlignVerticalCenterWith="newPasswordTextBlock" RelativePanel.AlignLeftWith="confirmPasswordBox"/>
+            <PasswordBox Name="confirmPasswordBox" Password="{Binding ConfirmPassword, Mode=TwoWay}" Width="500" RelativePanel.RightOf="confirmPasswordTextBlock" RelativePanel.AlignVerticalCenterWith="confirmPasswordTextBlock"/>
+            <TextBlock Name="errorTextBlock"  Text="{Binding ErrorMessage, Mode=TwoWay}"  RelativePanel.Below="confirmPasswordBox"  RelativePanel.AlignHorizontalCenterWithPanel="True" Foreground="Red"/>
+            <Button Name="changeButton" Command="{Binding ChangePassword}" RelativePanel.Below="errorTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True">Change password</Button>
+            
         </RelativePanel>
     </Grid>
 </Page>
