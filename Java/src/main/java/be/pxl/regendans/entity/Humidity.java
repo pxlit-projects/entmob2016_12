@@ -45,7 +45,7 @@ public class Humidity{
     }
 
     public boolean moist(){
-      return humidity > 75.00;
+      return getHumidity() > 75.00;
     }
 
     public int getId() {
