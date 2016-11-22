@@ -1,6 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace ProjectEnt_SensorTag.Model
 {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace ProjectEnt_SensorTag.Model
 {
@@ -10,7 +9,6 @@ namespace ProjectEnt_SensorTag.Model
     public int UserId { get; set; }
     public int LocationId { get; set; }
     public int Presure { get; set; }
-    [Timestamp]
     public Byte[] Timestamp { get; set; }
     }
 }
