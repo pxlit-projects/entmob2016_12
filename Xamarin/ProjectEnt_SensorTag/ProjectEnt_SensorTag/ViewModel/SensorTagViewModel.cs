@@ -50,14 +50,14 @@ namespace ProjectEnt_SensorTag.ViewModel
 
                     DeviceSetup.StopScanning();
                     Set(() => Device, ref device, value);
-                  
+
                     nav.NavigateTo("SensorTagDetail");
                     Messenger.Default.Send<IDevice>(device);
                     device = null;
                 }
             }
         }
-       
+
         public SensorTagViewModel(INavigationService nav)
         {
             this.nav = nav;
@@ -71,11 +71,13 @@ namespace ProjectEnt_SensorTag.ViewModel
         {
             try
             {
-                var device = await DeviceSetup.FindDevice((e) =>
+                while (scanning != false)
                 {
-                    Scanning = e;
-                });
-
+                    var device = await DeviceSetup.FindDevice((e) =>
+                    {
+                        Scanning = e;
+                    });
+                }
                 deviceList.Add(device);
             }
             catch
