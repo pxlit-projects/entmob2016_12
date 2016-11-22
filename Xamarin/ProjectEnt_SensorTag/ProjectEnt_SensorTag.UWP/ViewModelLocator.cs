@@ -32,7 +32,7 @@ namespace ProjectEnt_SensorTag.UWP
         }
 
 
-        private static OverviewViewModel overviewViewModel = new OverviewViewModel();
+        private static OverviewViewModel overviewViewModel = new OverviewViewModel(new NavigationService());
 
         public static OverviewViewModel OverviewViewModel
         {
