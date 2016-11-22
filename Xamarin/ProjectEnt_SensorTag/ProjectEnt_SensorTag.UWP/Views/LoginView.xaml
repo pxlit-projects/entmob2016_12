@@ -25,7 +25,8 @@
                     <Setter Target="wachtwoordPasswordBox.Width" Value="700"/>
                     <Setter Target="loginButton.FontSize" Value="60"/>
                     <Setter Target="loginButton.Width" Value="1080"/>
-                    <Setter Target="wachtwoordTextBlock.Text" Value="Wachtwoord:"/>
+                        <Setter Target="errorTextBlock.FontSize" Value="40"/>
+                        <Setter Target="wachtwoordTextBlock.Text" Value="Wachtwoord:"/>
                 </VisualState.Setters>
             </VisualState>
             <VisualState>
@@ -33,7 +34,8 @@
                     <AdaptiveTrigger MinWindowWidth="900" />
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
-                    <Setter Target="gebruikersnaamTextBlock.FontSize" Value="40"/>
+                        <Setter Target="errorTextBlock.FontSize" Value="30"/>
+                        <Setter Target="gebruikersnaamTextBlock.FontSize" Value="40"/>
                     <Setter Target="wachtwoordTextBlock.FontSize" Value="40"/>
                     <Setter Target="adminTextBox.FontSize" Value="40"/>
                     <Setter Target="wachtwoordPasswordBox.FontSize" Value="40"/>
@@ -49,7 +51,8 @@
                     <AdaptiveTrigger MinWindowWidth="400" />
                 </VisualState.StateTriggers>
                 <VisualState.Setters>
-                    <Setter Target="gebruikersnaamTextBlock.FontSize" Value="30"/>
+                        <Setter Target="errorTextBlock.FontSize" Value="15"/>
+                        <Setter Target="gebruikersnaamTextBlock.FontSize" Value="30"/>
                     <Setter Target="wachtwoordTextBlock.FontSize" Value="30"/>
                     <Setter Target="adminTextBox.FontSize" Value="30"/>
                     <Setter Target="wachtwoordPasswordBox.FontSize" Value="30"/>
@@ -78,15 +81,15 @@
             <RelativePanel>
                 <TextBlock x:Name="gebruikersnaamTextBlock">Administrator:</TextBlock>
 
-                <TextBox Name="adminTextBox" RelativePanel.RightOf="gebruikersnaamTextBlock" />
+                    <TextBox Name="adminTextBox" Text="{Binding User.Username, Mode=TwoWay}" RelativePanel.RightOf="gebruikersnaamTextBlock" />
 
-                <PasswordBox Name="wachtwoordPasswordBox" RelativePanel.RightOf="wachtwoordTextBlock" RelativePanel.Below="adminTextBox" RelativePanel.AlignLeftWith="adminTextBox"/>
-
+                    <PasswordBox Name="wachtwoordPasswordBox" Password="{Binding User.Password, Mode=TwoWay}" RelativePanel.RightOf="wachtwoordTextBlock" RelativePanel.Below="adminTextBox" RelativePanel.AlignLeftWith="adminTextBox"/>
+                    
                 <TextBlock x:Name="wachtwoordTextBlock" RelativePanel.Below="gebruikersnaamTextBlock">Wachtwoord:</TextBlock>
 
+                    <TextBlock Name="errorTextBlock" Text="{Binding ErrorMessage, Mode=TwoWay}" RelativePanel.Below="wachtwoordPasswordBox" Foreground="Red"/>
 
-
-                <Button x:Name="loginButton" RelativePanel.Below="wachtwoordPasswordBox" Width="500" Command="{Binding Login}">Login</Button>
+                    <Button x:Name="loginButton" RelativePanel.Below="errorTextBlock" Width="500" Command="{Binding Login}">Login</Button>
             </RelativePanel>
 
         </StackPanel>

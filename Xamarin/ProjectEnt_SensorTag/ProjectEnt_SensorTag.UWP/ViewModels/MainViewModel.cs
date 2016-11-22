@@ -1,4 +1,5 @@
 ﻿using ProjectEnt_SensorTag.Model;
+using ProjectEnt_SensorTag.UWP.Messaging;
 using ProjectEnt_SensorTag.UWP.Navigation;
 using ProjectEnt_SensorTag.UWP.Views;
 using System;
@@ -42,6 +43,9 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
         public MainViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
+
+            //Receive user
+            Messenger.Default.Register<User>(null, user => this.user = user);
         }
 
         private ICommand _changePassword;
@@ -70,18 +74,37 @@ namespace ProjectEnt_SensorTag.UWP.ViewModels
                 new CustomCommand(s =>
                 {
                     List<Temperature> temps = new List<Temperature>();
+                    
+                    //Dummy data
                     Temperature temp = new Temperature();
-                    User user = new User();
-                    user.Id = 1;
-                    user.Username = "ExampleUser";
-                    temp.User = user;
+
+                    //Dummy data User
+                    User userDummy = new User();
+                    userDummy.Id = 1;
+                    userDummy.Username = "ExampleUser";
+
+                    temp.User = userDummy;
                     temp.TemperatureAmount = 25.00;
                     temps.Add(temp);
+
+                    Temperature temp2 = new Temperature();
+                    temp2.User = user;
+                    temp2.TemperatureAmount = 17.00;
+                    temps.Add(temp2);
+
                     TemperatureList = temps;
                 }
                 ,
                  s => true);
             }
+        }
+
+        private User user;
+
+        public User User
+        {
+            get { return user; }
+            set { user = value; }
         }
     }
 }

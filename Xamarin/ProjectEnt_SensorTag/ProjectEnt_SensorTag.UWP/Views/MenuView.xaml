@@ -17,6 +17,7 @@
                         <AdaptiveTrigger MinWindowHeight="100" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="welkomTextBlock.FontSize" Value="60"/>
                         <Setter Target="helloTextBlock.FontSize" Value="60"/>
                         <Setter Target="keuzeTextBlock.FontSize" Value="50"/>
                     </VisualState.Setters>
@@ -30,6 +31,7 @@
                         <AdaptiveTrigger MinWindowWidth="750" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="welkomTextBlock.FontSize" Value="40"/>
                         <Setter Target="infoTextBlock.FontSize" Value="50"/>
                         <Setter Target="helloTextBlock.FontSize" Value="40"/>
                         <Setter Target="keuzeTextBlock.FontSize" Value="30"/>
@@ -43,6 +45,7 @@
                         <AdaptiveTrigger MinWindowWidth="300" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="welkomTextBlock.FontSize" Value="30"/>
                         <Setter Target="infoTextBlock.FontSize" Value="30"/>
                         <Setter Target="helloTextBlock.FontSize" Value="25"/>
                         <Setter Target="keuzeTextBlock.FontSize" Value="15"/>
@@ -61,10 +64,14 @@
             <RowDefinition Height="1.2*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        
+
         <RelativePanel Grid.Row="0" BorderBrush="Black">
-            <TextBlock Name="helloTextBlock" Text="Welkom Admin" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
-            <TextBlock Name="keuzeTextBlock" Text="Wat wenst u te doen ?" RelativePanel.Below="helloTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <StackPanel Name="stack" Orientation="Horizontal"  RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                <TextBlock Name="welkomTextBlock"  Text="Welkom" Margin="0,0,20,0" />
+                <TextBlock Name="helloTextBlock" Text="{Binding User.Username}" />
+            </StackPanel>
+            
+            <TextBlock Name="keuzeTextBlock" Text="Wat wenst u te doen ?" RelativePanel.Below="stack" RelativePanel.AlignHorizontalCenterWithPanel="True" />
             <Grid Name="layoutGrid" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
             <Button Name="tempButton" RelativePanel.LeftOf="layoutGrid" Margin="0,0,20,0"  RelativePanel.Below="keuzeTextBlock"  Command="{Binding Temp}">Temperature</Button>
             <Button Name="changePasswdButton" Margin="20,0,0,0"  Command="{Binding ChangePassword}" RelativePanel.RightOf="layoutGrid" RelativePanel.AlignTopWith="tempButton">Change password</Button>
