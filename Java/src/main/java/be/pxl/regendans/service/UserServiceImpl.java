@@ -27,7 +27,6 @@ public class UserServiceImpl implements UserService {
     private HumidityRepository humidityRepository;
     @Autowired
     private AirPressureRepository airPressureRepository;
-    @
 
     @Override
     @UserAccessLogger(message = "Searched for specific user")
