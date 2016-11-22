@@ -28,7 +28,7 @@ namespace ProjectEnt_SensorTag.SensorTagLib.Devices
             {
                 if (e.Device?.Name != null)
                 {
-                    if (e.Device.Name.Contains("SensorTag") == true && e.Device.NativeDevice != null)
+                    if (e.Device.Name.Contains("SensorTag") == true)
                     {
                         Debug.WriteLine("Device Found With Name " + e.Device.Name);
                         tcs.TrySetResult(e.Device);

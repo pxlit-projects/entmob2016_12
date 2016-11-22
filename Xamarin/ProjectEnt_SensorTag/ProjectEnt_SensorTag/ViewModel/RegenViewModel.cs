@@ -26,6 +26,18 @@ namespace ProjectEnt_SensorTag.ViewModel
 
         private RelayCommand getInfo;
 
+        private bool visible;
+
+        public bool Visible
+        {
+            get { return visible; }
+            set
+            {
+                visible = value;
+                RaisePropertyChanged(() => Visible);
+            }
+        }
+
         public RelayCommand GetInfo
         {
             get { return getInfo; }
@@ -73,6 +85,7 @@ namespace ProjectEnt_SensorTag.ViewModel
             {
                  SendMessage.PostRequest<object, Humidity>("Somewhere",sensorTag.HumiditySensor.Humidity);
                  SendMessage.PostRequest<object, Temperature>("Somewhere", sensorTag.TemperatureSensor.Temperature);
+                Visible = true;
             }, () => sensorTag.HumiditySensor.Humidity.HumidityAmount != 0 && sensorTag.TemperatureSensor.Temperature.TemperatureAmount != 0);
             getTemp = new RelayCommand(() =>
             {

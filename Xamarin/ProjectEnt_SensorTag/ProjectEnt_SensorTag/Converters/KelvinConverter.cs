@@ -12,14 +12,16 @@ namespace ProjectEnt_SensorTag.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int celsius = int.Parse((String)value);
+            String item = value.ToString();
+            Double celsius = Double.Parse(item);
             return celsius + 273.15;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int kelvin = int.Parse((String)value);
-            return kelvin - 273.15;
+            String item = value.ToString();
+            Double celsius = Double.Parse(item);
+            return celsius - 273.15;
         }
     }
 }

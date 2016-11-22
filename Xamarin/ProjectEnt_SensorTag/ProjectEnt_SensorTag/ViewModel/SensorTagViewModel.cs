@@ -71,13 +71,10 @@ namespace ProjectEnt_SensorTag.ViewModel
         {
             try
             {
-                while (scanning != false)
-                {
                     var device = await DeviceSetup.FindDevice((e) =>
                     {
                         Scanning = e;
                     });
-                }
                 deviceList.Add(device);
             }
             catch

@@ -12,13 +12,21 @@ namespace ProjectEnt_SensorTag.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int fahrenheit = int.Parse((String)value);
-            return fahrenheit * 9 / 5 + 32;
+            String item = value.ToString();
+            Double fahrenheit = Double.Parse(item);
+            return fahrenheit * 9 / 5 + 32 + "℉";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int fahrenheit = int.Parse((String)value);
+            String item = value.ToString();
+            Double fahrenheit = Double.Parse(item.Substring(0,item.Length-1));
+
+            if(fahrenheit == 0)
+            {
+                return 0;
+            }
+
             return fahrenheit / 1.8 - 32;
         }
     }
