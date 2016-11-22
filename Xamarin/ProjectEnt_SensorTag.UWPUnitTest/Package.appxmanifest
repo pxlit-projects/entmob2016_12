@@ -5,14 +5,14 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
-  <Identity Name="b1d03e9b-d064-4269-bd78-d98c104f78a5"
+  <Identity Name="a482c53a-18c0-480d-9d75-0c8c02b36e3d"
             Publisher="CN=Frank"
             Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="b1d03e9b-d064-4269-bd78-d98c104f78a5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="a482c53a-18c0-480d-9d75-0c8c02b36e3d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>ProjectEnt_SensorTag.UWPUnitTests</DisplayName>
+    <DisplayName>ProjectEnt_SensorTag.UWPUnitTest</DisplayName>
     <PublisherDisplayName>Frank</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -27,12 +27,12 @@
   <Applications>
     <Application Id="vstest.executionengine.universal.App" 
         Executable="$targetnametoken$.exe"
-        EntryPoint="ProjectEnt_SensorTag.UWPUnitTests.App">
+        EntryPoint="ProjectEnt_SensorTag.UWPUnitTest.App">
       <uap:VisualElements
-        DisplayName="ProjectEnt_SensorTag.UWPUnitTests"
+        DisplayName="ProjectEnt_SensorTag.UWPUnitTest"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="ProjectEnt_SensorTag.UWPUnitTests"
+        Description="ProjectEnt_SensorTag.UWPUnitTest"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

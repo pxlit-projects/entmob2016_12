@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ProjectEnt_SensorTag.UWPUnitTests")]
+[assembly: AssemblyTitle("ProjectEnt_SensorTag.UWPUnitTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ProjectEnt_SensorTag.UWPUnitTests")]
+[assembly: AssemblyProduct("ProjectEnt_SensorTag.UWPUnitTest")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

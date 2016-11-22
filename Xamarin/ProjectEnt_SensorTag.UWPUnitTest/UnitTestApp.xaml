@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="ProjectEnt_SensorTag.UWPUnitTests.App"
+    x:Class="ProjectEnt_SensorTag.UWPUnitTest.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ProjectEnt_SensorTag.UWPUnitTests"
+    xmlns:local="using:ProjectEnt_SensorTag.UWPUnitTest"
     RequestedTheme="Light">
 
 </Application>

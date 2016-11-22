@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using ProjectEnt_SensorTag.UWP.ViewModels;
 
-namespace ProjectEnt_SensorTag.UWPUnitTests
+namespace ProjectEnt_SensorTag.UWPUnitTest
 {
     [TestClass]
     public class UnitTest1
