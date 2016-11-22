@@ -33,7 +33,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(Application.class)
 @WebAppConfiguration
-public class HumidityTest {
+public class RainTest {
 
     @Autowired
     SensorTagService sensorTagService;
@@ -45,7 +45,7 @@ public class HumidityTest {
     public AirPressureRepository airPressureRepository;
 
     @Test
-    public void humdidityTest() throws Exception {
+    public void doesItRainTest() throws Exception {
         Humidity humidity = mock(Humidity.class);
         Temperature temperature = mock(Temperature.class);
         AirPressure airPressure = mock(AirPressure.class);
