@@ -12,4 +12,6 @@ import java.util.List;
 @Repository
 public interface AirPressureRepository extends CrudRepository<AirPressure,Integer> {
     List<AirPressure> findAirpressureByUserid(int id);
+
+    void deleteAirpressureByUserid(int id);
 }

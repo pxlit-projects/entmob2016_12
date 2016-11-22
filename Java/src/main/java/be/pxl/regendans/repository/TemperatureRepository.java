@@ -10,4 +10,6 @@ import java.util.List;
  */
 public interface TemperatureRepository extends CrudRepository<Temperature,Integer> {
     List<Temperature> findTemperatureByUserid(int id);
+
+    void deleteTemperatureByUserid(int id);
 }
