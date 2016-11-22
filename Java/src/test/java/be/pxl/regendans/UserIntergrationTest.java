@@ -1,6 +1,8 @@
 package be.pxl.regendans;
 
+import be.pxl.regendans.builders.HumidityBuilder;
 import be.pxl.regendans.controller.SensorDataController;
+import be.pxl.regendans.entity.Humidity;
 import be.pxl.regendans.entity.Temperature;
 import be.pxl.regendans.entity.User;
 import be.pxl.regendans.repository.AirPressureRepository;
@@ -28,6 +30,8 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -67,6 +71,10 @@ public class UserIntergrationTest {
         temperatureRepository.deleteAll();
         humidityRepository.deleteAll();
         airPressureRepository.deleteAll();
+
+        User userJan = user().setUsername("Jan").setPassword("P@ssword").build();
+        userRepository.save(userJan);
+
     }
 
     @Autowired
@@ -84,20 +92,13 @@ public class UserIntergrationTest {
 
     @Test
     public void findUserById_ReturnsUserByGivenUsername() throws Exception {
-        User userJan = user().setUsername("Jan").setPassword("P@ssword").build();
-        userRepository.save(userJan);
-
         User goldenUser = userRepository.findByUsername("Jan");
-
         assertThat(goldenUser.getUsername()).isEqualTo("Jan");
     }
 
     @Test
-    public void saveTemperatureTest() throws Exception {
+    public void saveTemperatureIntegrationTest() throws Exception {
         Map<String, Object> json = new HashMap<>();
-
-        User userJan = user().setUsername("Jan").setPassword("P@ssword").build();
-        userRepository.save(userJan);
 
         Double temperature = 25.0; // degrees
         Integer userId = 1; // Jan
@@ -117,11 +118,8 @@ public class UserIntergrationTest {
     }
 
     @Test
-    public void saveHumdityTest() throws Exception {
+    public void saveHumdityIntegrationTest() throws Exception {
         Map<String, Object> json = new HashMap<>();
-
-        User userJan = user().setUsername("Jan").setPassword("P@ssword").build();
-        userRepository.save(userJan);
 
         Double humidity = 25.0; // degrees
         Integer userId = 1; // Jan
@@ -129,7 +127,8 @@ public class UserIntergrationTest {
         json.put("humidity", humidity);
         json.put("userid", userId);
 
-        MvcResult result = mockMvc.perform(post(SensorDataController.SENSORDATA_BASE_URL + "/humidity")
+        MvcResult result = mockMvc.perform(post(SensorDataController.SENSORDATA_BASE_URL +
+                "/humidity")
                 .content(asJson(json))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
@@ -141,16 +140,24 @@ public class UserIntergrationTest {
     }
 
     @Test
-    public void saveAirPressureTest() throws Exception {
-        Map<String, Object> json = new HashMap<>();
+    public void saveHumdityTest() throws Exception {
+        Humidity humidity = HumidityBuilder.humidity().setHumidity(25.0)
+                .setUserid(1).setTimestamp(Timestamp.from(Instant.now())).build();
 
-        User userJan = user().setUsername("Jan").setPassword("P@ssword").build();
-        userRepository.save(userJan);
+        humidityRepository.save(humidity);
+        List<Humidity> humidityList = humidityRepository.findHumidityByUserid(1);
+
+        assertThat(humidityList.get(0).getHumidity()).isEqualTo(25.0);
+    }
+
+    @Test
+    public void saveAirPressureIntegrationTest() throws Exception {
+        Map<String, Object> json = new HashMap<>();
 
         Double airPressure = 25.0; // degrees
         Integer userId = 1; // Jan
 
-        json.put("airpressure", airPressure);
+        json.put("pressure", airPressure);
         json.put("userid", userId);
 
         MvcResult result = mockMvc.perform(post(SensorDataController.SENSORDATA_BASE_URL + "/airpressure")

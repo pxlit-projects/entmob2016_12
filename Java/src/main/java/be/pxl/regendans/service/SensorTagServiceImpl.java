@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Frank on 28-10-2016.
@@ -28,7 +27,7 @@ public class SensorTagServiceImpl implements SensorTagService {
     @Override
     public boolean doesItRain(int userId) {
         List<Temperature> temperatureList = temperatureRepository.findTemperatureByUserid(userId);
-        List<Humidity> humidityList = humidityRepository.findHumidityByUserId(userId);
+        List<Humidity> humidityList = humidityRepository.findHumidityByUserid(userId);
         List<AirPressure> airPressureList = airPressureRepository.findAirpressureByUserid(userId);
 
         long cold = temperatureList.stream()

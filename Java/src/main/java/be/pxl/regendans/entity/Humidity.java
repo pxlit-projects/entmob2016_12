@@ -18,7 +18,7 @@ public class Humidity{
     private int id;
 
     @Column(name = "userid")
-    private int userId;
+    private int userid;
 
     @Column(name = "humidity")
     private double humidity;
@@ -26,10 +26,19 @@ public class Humidity{
     @Column(name = "timestamp")
     private Timestamp timestamp;
 
+    public Humidity(int userid, double humidity, Timestamp timestamp) {
+        this.userid = userid;
+        this.humidity = humidity;
+        this.timestamp = timestamp;
+    }
+
+    public Humidity() {
+    }
+
     @Override
     public String toString(){
         return "Humidity [id=" + id +
-                ", userId=" + userId +
+                ", userId=" + userid +
                 ", humidity=" + humidity +
                 ", timestamp=" + timestamp +
                 "}";
@@ -48,11 +57,11 @@ public class Humidity{
     }
 
     public int getUserId() {
-        return userId;
+        return userid;
     }
 
     public void setUserId(int userId) {
-        this.userId = userId;
+        this.userid = userId;
     }
 
     public double getHumidity() {
