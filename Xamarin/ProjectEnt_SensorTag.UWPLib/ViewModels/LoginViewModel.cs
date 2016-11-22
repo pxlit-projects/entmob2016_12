@@ -14,7 +14,7 @@ using Windows.UI.Popups;
 
 namespace ProjectEnt_SensorTag.UWP.ViewModels
 {
-    class LoginViewModel : INotifyPropertyChanged
+    public class LoginViewModel : INotifyPropertyChanged
     {
         private INavigationService _navigationService;
 

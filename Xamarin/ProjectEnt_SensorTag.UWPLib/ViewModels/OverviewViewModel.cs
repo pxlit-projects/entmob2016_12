@@ -13,7 +13,7 @@ using System.Security;
 
 namespace ProjectEnt_SensorTag.UWP.ViewModels
 {
-    class OverviewViewModel : INotifyPropertyChanged
+    public class OverviewViewModel : INotifyPropertyChanged
     {
         private INavigationService _navigationService;
         private User user;

@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace ProjectEnt_SensorTag.UWP.ViewModels
 {
-    class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : INotifyPropertyChanged
     {
         private INavigationService _navigationService;
 

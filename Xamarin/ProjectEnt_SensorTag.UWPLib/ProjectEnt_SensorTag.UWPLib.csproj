@@ -107,6 +107,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Messaging\Messenger.cs" />
     <Compile Include="Navigation\INavigationService.cs" />
     <Compile Include="Navigation\NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +127,12 @@
     <EmbeddedResource Include="Properties\ProjectEnt_SensorTag.UWPLib.rd.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProjectEnt_SensorTag.Model\ProjectEnt_SensorTag.Model.csproj">
+      <Project>{290cdb70-cafa-4aaa-9bbd-e8080bce2f9f}</Project>
+      <Name>ProjectEnt_SensorTag.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Page Include="Views\LoginView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,12 +145,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ProjectEnt_SensorTag.Model\ProjectEnt_SensorTag.Model.csproj">
-      <Project>{290cdb70-cafa-4aaa-9bbd-e8080bce2f9f}</Project>
-      <Name>ProjectEnt_SensorTag.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
