@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using ProjectEnt_SensorTag.UWP.ViewModels;
+using System.Diagnostics;
 
 namespace ProjectEnt_SensorTag.UWPUnitTest
 {
@@ -12,9 +13,12 @@ namespace ProjectEnt_SensorTag.UWPUnitTest
         {
             var test = new TestNotificationService();
             var login = new LoginViewModel(test);
+            login.User = new Model.User();
+            login.User.Username = "Francesco";
+            login.User.Password = "admininstrator";
 
             login.Login.Execute(null);
-
+            Debug.WriteLine(test.CurrentPageKey);
             Assert.AreEqual(test.CurrentPageKey, "ProjectEnt_SensorTag.UWP.Views.MenuView");
         }
         [TestMethod]
@@ -23,7 +27,12 @@ namespace ProjectEnt_SensorTag.UWPUnitTest
             var test = new TestNotificationService();
             var login = new MainViewModel(test);
 
+            login.User = new Model.User();
+            login.User.Username = "Francesco";
+            login.User.Password = "admininstrator";
+
             login.Temp.CanExecute(null);
+
             var temp = login.TemperatureList;
             Assert.IsTrue(temp.Count > 0);
         }
